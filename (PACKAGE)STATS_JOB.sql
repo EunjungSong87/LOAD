@@ -58,6 +58,21 @@ CREATE TABLE PGDBA.STATS_LARGE_SCHEDULE (
 -- ) L;
 
 
+-- ※ 수동 관리 대상인 "파티션" 대용량 테이블은 통계를 직접 넣어준 뒤(예: 카피) LOCK을 걸어서
+--    자동 통계 수집 잡(이 패키지 포함)이 덮어쓰지 못하도록 보호하는 걸 권장.
+--
+-- BEGIN
+--     DBMS_STATS.LOCK_TABLE_STATS(OWNNAME => '스키마명', TABNAME => '테이블명');
+-- END;
+-- /
+--
+-- 수동으로 통계를 다시 갱신해야 할 때는 잠금을 풀고 작업 후 다시 잠그면 됨
+-- BEGIN
+--     DBMS_STATS.UNLOCK_TABLE_STATS(OWNNAME => '스키마명', TABNAME => '테이블명');
+-- END;
+-- /
+
+
 CREATE TABLE PGDBA.STATS_JOB_LOG (
     LOG_SEQ         NUMBER GENERATED ALWAYS AS IDENTITY, -- 자동 증가 시퀀스
     LOG_DATE        DATE DEFAULT SYSDATE,               -- 로그 기록 일시
