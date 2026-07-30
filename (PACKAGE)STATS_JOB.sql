@@ -31,7 +31,31 @@ INSERT INTO PGDBA.STATS_SCHEMA_SCHEDULE VALUES ('THU', 'S_JOBPASS', 4, 'Y');
 INSERT INTO PGDBA.STATS_SCHEMA_SCHEDULE VALUES ('THU', 'S_SEPRISM', 4, 'Y');
 INSERT INTO PGDBA.STATS_SCHEMA_SCHEDULE VALUES ('THU', 'S_XAS', 4, 'Y');
 
-COMMIT; 
+COMMIT;
+
+
+-- 대용량(50GB 이상) "비파티션" 테이블을 테이블 단위로 관리하는 스케줄
+-- 파티션 대용량 테이블은 수동 관리 대상이므로 여기 등록하지 않음
+CREATE TABLE PGDBA.STATS_LARGE_SCHEDULE (
+    RUN_DAY_OF_WEEK VARCHAR2(10),   -- 이 테이블을 수집할 요일 (예: 'SAT')
+    OWNER           VARCHAR2(30),   -- 스키마명
+    TABLE_NAME      VARCHAR2(30),   -- 테이블명
+    IS_ACTIVE       VARCHAR2(1) DEFAULT 'Y'
+);
+
+-- ※ 등록은 기존 RUN_DAILY_STATS_BY_TABLE에서 용량 초과로 SKIP된 이력을 기준으로 채우면 됨.
+--    아래 쿼리로 INSERT문을 생성해서 검토 후 실행 (파티션 테이블은 자동 제외됨).
+--
+-- SELECT 'INSERT INTO PGDBA.STATS_LARGE_SCHEDULE (RUN_DAY_OF_WEEK, OWNER, TABLE_NAME, IS_ACTIVE) VALUES (''SAT'', '''
+--        || L.SCHEMA_NAME || ''', ''' || L.TABLE_NAME || ''', ''Y'');' AS INSERT_STMT
+-- FROM (
+--     SELECT DISTINCT J.SCHEMA_NAME, J.TABLE_NAME
+--     FROM PGDBA.STATS_JOB_LOG J, DBA_TABLES T
+--     WHERE J.STATUS = 'SKIP'
+--       AND T.OWNER = J.SCHEMA_NAME
+--       AND T.TABLE_NAME = J.TABLE_NAME
+--       AND T.PARTITIONED = 'NO'
+-- ) L;
 
 
 CREATE TABLE PGDBA.STATS_JOB_LOG (
@@ -60,7 +84,10 @@ CREATE INDEX PGDBA.IX_STATS_JOB_LOG_01 ON PGDBA.STATS_JOB_LOG (LOG_DATE, STATUS)
 CREATE OR REPLACE PACKAGE PGDBA.PKG_MAINT_STATS AS
     -- 새벽 배치 Job에서 호출할 메인 프로시저
     PROCEDURE RUN_DAILY_STATS_BY_TABLE;
-    
+
+    -- 대용량(50GB+) 비파티션 테이블 전용 프로시저 (STATS_LARGE_SCHEDULE 기준, 지정 요일에만 동작)
+    PROCEDURE RUN_LARGE_TABLE_STATS;
+
     -- 내부 로깅용 프로시저 (독립 트랜잭션)
     PROCEDURE WRITE_LOG (
         P_DAY      IN VARCHAR2, P_SCHEMA   IN VARCHAR2, P_TABLE    IN VARCHAR2,
@@ -129,16 +156,22 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
               AND IS_ACTIVE = 'Y';
               
         -- 2. 해당 스키마 내부의 테이블들을 가져오는 커서
+        --    (테이블 전체 통계 또는 파티션 통계 중 하나라도 STALE이면 대상에 포함)
         CURSOR C_TABLES(P_OWNER VARCHAR2) IS
-            SELECT A.TABLE_NAME
-            FROM DBA_TABLES A, DBA_TAB_STATISTICS B 
-            WHERE A.OWNER = B.OWNER 
-              AND A.TABLE_NAME = B.TABLE_NAME 
-              AND A.OWNER = P_OWNER
+            SELECT A.TABLE_NAME, A.PARTITIONED
+            FROM DBA_TABLES A
+            WHERE A.OWNER = P_OWNER
               AND A.TEMPORARY = 'N'
               AND A.NESTED = 'NO'
               AND A.DURATION IS NULL
-              AND ( B.STALE_STATS = 'YES' OR B.STALE_STATS IS NULL) 
+              AND EXISTS (
+                    SELECT 1
+                    FROM DBA_TAB_STATISTICS B
+                    WHERE B.OWNER = A.OWNER
+                      AND B.TABLE_NAME = A.TABLE_NAME
+                      AND B.OBJECT_TYPE IN ('TABLE', 'PARTITION', 'SUBPARTITION')
+                      AND ( B.STALE_STATS = 'YES' OR B.STALE_STATS IS NULL)
+              )
             ORDER BY TABLE_NAME;
             
     BEGIN
@@ -161,7 +194,7 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
                     WHERE OWNER = R_SCH.SCHEMA_NAME
                      AND SEGMENT_NAME = R_TBL.table_name ;
 
-                    IF V_TABLE_GB >= 50 THEN 
+                    IF V_TABLE_GB >= 50 THEN
                         V_END_TIME := SYSTIMESTAMP;
                         WRITE_LOG(
                             P_DAY         => V_CURRENT_DAY,
@@ -171,8 +204,33 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
                             P_END         => V_END_TIME,
                             P_STATUS      => 'SKIP',
                             P_ERR_MSG     => '테이블 용량 크기로 자동패스 '
-                        ); 
-                        CONTINUE; 
+                        );
+
+                        -- 비파티션 대용량 테이블은 STATS_LARGE_SCHEDULE에 자동 등록 (기존에 등록된 요일 재사용)
+                        -- 파티션 테이블은 수동 관리 대상이므로 등록하지 않음
+                        IF R_TBL.PARTITIONED = 'NO' THEN
+                            BEGIN
+                                INSERT INTO STATS_LARGE_SCHEDULE (RUN_DAY_OF_WEEK, OWNER, TABLE_NAME, IS_ACTIVE)
+                                SELECT D.RUN_DAY_OF_WEEK, R_SCH.SCHEMA_NAME, R_TBL.TABLE_NAME, 'Y'
+                                FROM (
+                                    SELECT RUN_DAY_OF_WEEK
+                                    FROM STATS_LARGE_SCHEDULE
+                                    WHERE IS_ACTIVE = 'Y'
+                                      AND ROWNUM = 1
+                                ) D
+                                WHERE NOT EXISTS (
+                                    SELECT 1 FROM STATS_LARGE_SCHEDULE X
+                                    WHERE X.OWNER = R_SCH.SCHEMA_NAME
+                                      AND X.TABLE_NAME = R_TBL.TABLE_NAME
+                                );
+                                COMMIT;
+                            EXCEPTION
+                                WHEN OTHERS THEN
+                                    ROLLBACK; -- 등록 실패해도 메인 배치는 계속 진행
+                            END;
+                        END IF;
+
+                        CONTINUE;
                     END IF;
 
                     -- 통계 수집 실행
@@ -181,10 +239,11 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
                         TABNAME          => R_TBL.TABLE_NAME,
                         ESTIMATE_PERCENT => DBMS_STATS.AUTO_SAMPLE_SIZE,
                         GRANULARITY      => 'AUTO',
-                        CASCADE          => TRUE, 
+                        CASCADE          => TRUE,
                         DEGREE           => 8,
                         NO_INVALIDATE    => DBMS_STATS.AUTO_INVALIDATE,
-                        METHOD_OPT       =>'FOR ALL COLUMNS SIZE 1'
+                        METHOD_OPT       =>'FOR ALL COLUMNS SIZE 1',
+                        OPTIONS          => 'GATHER AUTO' -- 파티션 테이블: STALE/누락된 파티션만 재수집, 나머지는 스킵
                     );
                     
                     V_END_TIME := SYSTIMESTAMP;
@@ -216,10 +275,81 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
                         );
                 END;
             END LOOP;
-            
+
         END LOOP;
-        
+
     END RUN_DAILY_STATS_BY_TABLE;
+
+
+    -- [대용량(50GB+) 비파티션 테이블 전용 프로시저]
+    -- STATS_LARGE_SCHEDULE에 등록된 테이블만, 등록된 요일에만 수집
+    PROCEDURE RUN_LARGE_TABLE_STATS AS
+        V_CURRENT_DAY VARCHAR2(10);
+        V_START_TIME  TIMESTAMP;
+        V_END_TIME    TIMESTAMP;
+
+        -- STALE 상태인 등록 테이블만 대상으로 함 (비파티션이므로 OBJECT_TYPE='TABLE'만 확인하면 충분)
+        CURSOR C_LARGE_TABLES(P_DAY VARCHAR2) IS
+            SELECT S.OWNER, S.TABLE_NAME
+            FROM STATS_LARGE_SCHEDULE S
+            WHERE S.RUN_DAY_OF_WEEK = P_DAY
+              AND S.IS_ACTIVE = 'Y'
+              AND EXISTS (
+                    SELECT 1
+                    FROM DBA_TAB_STATISTICS B
+                    WHERE B.OWNER = S.OWNER
+                      AND B.TABLE_NAME = S.TABLE_NAME
+                      AND B.OBJECT_TYPE = 'TABLE'
+                      AND ( B.STALE_STATS = 'YES' OR B.STALE_STATS IS NULL)
+              )
+            ORDER BY S.OWNER, S.TABLE_NAME;
+
+    BEGIN
+        V_CURRENT_DAY := TO_CHAR(SYSDATE, 'DY', 'NLS_DATE_LANGUAGE=AMERICAN');
+
+        FOR R_TBL IN C_LARGE_TABLES(V_CURRENT_DAY) LOOP
+            V_START_TIME := SYSTIMESTAMP;
+
+            BEGIN
+                DBMS_STATS.GATHER_TABLE_STATS(
+                    OWNNAME          => R_TBL.OWNER,
+                    TABNAME          => R_TBL.TABLE_NAME,
+                    ESTIMATE_PERCENT => DBMS_STATS.AUTO_SAMPLE_SIZE,
+                    CASCADE          => TRUE,
+                    DEGREE           => 8,
+                    NO_INVALIDATE    => DBMS_STATS.AUTO_INVALIDATE,
+                    METHOD_OPT       => 'FOR ALL COLUMNS SIZE 1'
+                );
+
+                V_END_TIME := SYSTIMESTAMP;
+
+                WRITE_LOG(
+                    P_DAY     => V_CURRENT_DAY,
+                    P_SCHEMA  => R_TBL.OWNER,
+                    P_TABLE   => R_TBL.TABLE_NAME,
+                    P_START   => V_START_TIME,
+                    P_END     => V_END_TIME,
+                    P_STATUS  => 'SUCCESS',
+                    P_ERR_MSG => NULL
+                );
+
+            EXCEPTION
+                WHEN OTHERS THEN
+                    V_END_TIME := SYSTIMESTAMP;
+
+                    WRITE_LOG(
+                        P_DAY     => V_CURRENT_DAY,
+                        P_SCHEMA  => R_TBL.OWNER,
+                        P_TABLE   => R_TBL.TABLE_NAME,
+                        P_START   => V_START_TIME,
+                        P_END     => V_END_TIME,
+                        P_STATUS  => 'ERROR',
+                        P_ERR_MSG => SQLERRM
+                    );
+            END;
+        END LOOP;
+
+    END RUN_LARGE_TABLE_STATS;
 
 END PKG_MAINT_STATS;
 /
