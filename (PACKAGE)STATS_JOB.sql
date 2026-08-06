@@ -43,7 +43,7 @@ CREATE TABLE PGDBA.STATS_LARGE_SCHEDULE (
     IS_ACTIVE       VARCHAR2(1) DEFAULT 'Y'
 );
 
--- ※ 등록은 기존 RUN_DAILY_STATS_BY_TABLE에서 용량 초과로 SKIP된 이력을 기준으로 채우면 됨.
+-- ※ 등록은 기존 RUN_STATS_BY_SCHEDULE에서 용량 초과로 SKIP된 이력을 기준으로 채우면 됨.
 --    아래 쿼리로 INSERT문을 생성해서 검토 후 실행 (파티션 테이블은 자동 제외됨).
 --
 -- SELECT 'INSERT INTO PGDBA.STATS_LARGE_SCHEDULE (RUN_DAY_OF_WEEK, OWNER, TABLE_NAME, IS_ACTIVE) VALUES (''SAT'', '''
@@ -98,7 +98,7 @@ CREATE INDEX PGDBA.IX_STATS_JOB_LOG_01 ON PGDBA.STATS_JOB_LOG (LOG_DATE, STATUS)
 
 CREATE OR REPLACE PACKAGE PGDBA.PKG_MAINT_STATS AS
     -- 새벽 배치 Job에서 호출할 메인 프로시저
-    PROCEDURE RUN_DAILY_STATS_BY_TABLE;
+    PROCEDURE RUN_STATS_BY_SCHEDULE;
 
     -- 대용량(50GB+) 비파티션 테이블 전용 프로시저 (STATS_LARGE_SCHEDULE 기준, 지정 요일에만 동작)
     PROCEDURE RUN_LARGE_TABLE_STATS;
@@ -157,7 +157,7 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
 
 
     -- [메인 배치 프로시저]
-    PROCEDURE RUN_DAILY_STATS_BY_TABLE AS
+    PROCEDURE RUN_STATS_BY_SCHEDULE AS
         V_CURRENT_DAY VARCHAR2(10);
         V_START_TIME  TIMESTAMP;
         V_END_TIME    TIMESTAMP;
@@ -293,7 +293,7 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
 
         END LOOP;
 
-    END RUN_DAILY_STATS_BY_TABLE;
+    END RUN_STATS_BY_SCHEDULE;
 
 
     -- [대용량(50GB+) 비파티션 테이블 전용 프로시저]
@@ -368,6 +368,46 @@ CREATE OR REPLACE PACKAGE BODY PGDBA.PKG_MAINT_STATS AS
 
 END PKG_MAINT_STATS;
 /
+
+
+----------------------------------------------------------------------------------------------------------
+-- JOB SCHEDULER 등록 예시
+---------------------------------------------------------------------------------------------------------
+-- 두 프로시저 모두 내부적으로 요일 조건을 체크하므로 매일 호출해도 안전함
+-- (RUN_STATS_BY_SCHEDULE -> STATS_SCHEMA_SCHEDULE, RUN_LARGE_TABLE_STATS -> STATS_LARGE_SCHEDULE)
+
+-- BEGIN
+--     DBMS_SCHEDULER.CREATE_JOB(
+--         JOB_NAME        => 'PGDBA.JOB_STATS_BY_SCHEDULE',
+--         JOB_TYPE        => 'PLSQL_BLOCK',
+--         JOB_ACTION      => 'BEGIN PGDBA.PKG_MAINT_STATS.RUN_STATS_BY_SCHEDULE; END;',
+--         START_DATE      => SYSTIMESTAMP,
+--         REPEAT_INTERVAL => 'FREQ=DAILY; BYHOUR=1; BYMINUTE=0; BYSECOND=0', -- 매일 새벽 1시
+--         ENABLED         => TRUE,
+--         COMMENTS        => '스키마/요일별 일반 테이블 통계 수집'
+--     );
+-- END;
+-- /
+
+-- BEGIN
+--     DBMS_SCHEDULER.CREATE_JOB(
+--         JOB_NAME        => 'PGDBA.JOB_LARGE_TABLE_STATS',
+--         JOB_TYPE        => 'PLSQL_BLOCK',
+--         JOB_ACTION      => 'BEGIN PGDBA.PKG_MAINT_STATS.RUN_LARGE_TABLE_STATS; END;',
+--         START_DATE      => SYSTIMESTAMP,
+--         REPEAT_INTERVAL => 'FREQ=DAILY; BYHOUR=2; BYMINUTE=0; BYSECOND=0', -- 매일 새벽 2시 (일반 배치와 시간 분리)
+--         ENABLED         => TRUE,
+--         COMMENTS        => '대용량(50GB+) 비파티션 테이블 통계 수집'
+--     );
+-- END;
+-- /
+
+-- 잡 삭제가 필요할 때
+-- BEGIN
+--     DBMS_SCHEDULER.DROP_JOB('PGDBA.JOB_STATS_BY_SCHEDULE');
+--     DBMS_SCHEDULER.DROP_JOB('PGDBA.JOB_LARGE_TABLE_STATS');
+-- END;
+-- /
 
 
 
