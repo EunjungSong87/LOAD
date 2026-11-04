@@ -1,0 +1,162 @@
+;;; 
+Export: Release 19.0.0.0.0 - Production on Wed Nov 4 06:59:40 2026
+Version 19.16.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+04-NOV-26 06:59:42.964: ;;; **************************************************************************
+04-NOV-26 06:59:42.970: ;;; Parfile values:
+04-NOV-26 06:59:42.976: ;;;  parfile:  job_name=DBC_EXP_20261103065622_08
+04-NOV-26 06:59:42.983: ;;;  parfile:  flashback_scn=14275380917190
+04-NOV-26 06:59:42.990: ;;;  parfile:  logtime=ALL
+04-NOV-26 06:59:42.995: ;;;  parfile:  metrics=Y
+04-NOV-26 06:59:43.000: ;;;  parfile:  cluster=N
+04-NOV-26 06:59:43.010: ;;;  parfile:  parallel=2
+04-NOV-26 06:59:43.022: ;;;  parfile:  exclude=STATISTICS
+04-NOV-26 06:59:43.029: ;;;  parfile:  content=DATA_ONLY
+04-NOV-26 06:59:43.037: ;;;  parfile:  tables=PAYMENT.TB_VISA_AUTH,
+04-NOV-26 06:59:43.050: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202310,
+04-NOV-26 06:59:43.059: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202311,
+04-NOV-26 06:59:43.067: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202312,
+04-NOV-26 06:59:43.075: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202401,
+04-NOV-26 06:59:43.083: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202402,
+04-NOV-26 06:59:43.091: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202403,
+04-NOV-26 06:59:43.101: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202404,
+04-NOV-26 06:59:43.111: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202405,
+04-NOV-26 06:59:43.123: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202406,
+04-NOV-26 06:59:43.131: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202407,
+04-NOV-26 06:59:43.143: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202408,
+04-NOV-26 06:59:43.156: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202409,
+04-NOV-26 06:59:43.165: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202410,
+04-NOV-26 06:59:43.174: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202411,
+04-NOV-26 06:59:43.183: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202412,
+04-NOV-26 06:59:43.190: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202501,
+04-NOV-26 06:59:43.197: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202502,
+04-NOV-26 06:59:43.204: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202503,
+04-NOV-26 06:59:43.211: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202504,
+04-NOV-26 06:59:43.218: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202505,
+04-NOV-26 06:59:43.226: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202506,
+04-NOV-26 06:59:43.233: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202507,
+04-NOV-26 06:59:43.244: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202508,
+04-NOV-26 06:59:43.254: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202509,
+04-NOV-26 06:59:43.262: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202510,
+04-NOV-26 06:59:43.272: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202511,
+04-NOV-26 06:59:43.278: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202512,
+04-NOV-26 06:59:43.284: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202601,
+04-NOV-26 06:59:43.293: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202602,
+04-NOV-26 06:59:43.301: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202603,
+04-NOV-26 06:59:43.312: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202604,
+04-NOV-26 06:59:43.319: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202605,
+04-NOV-26 06:59:43.331: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202606,
+04-NOV-26 06:59:43.347: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202607,
+04-NOV-26 06:59:43.359: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202608,
+04-NOV-26 06:59:43.367: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202609,
+04-NOV-26 06:59:43.376: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202610,
+04-NOV-26 06:59:43.382: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202611,
+04-NOV-26 06:59:43.391: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_202612,
+04-NOV-26 06:59:43.402: ;;;  _parfile: PAYMENT.TB_MOID_VERIFY:MOID_VERIFY_9999,
+04-NOV-26 06:59:43.414: ;;;  _parfile: PAYMENT.TB_UI_AUTH_HISTORY,PAYMENT.TB_MAIL_DAILY_LOG,
+04-NOV-26 06:59:43.422: ;;;  _parfile: PAYMENT.TB_CARD_VAN_MSG:CARD_VAN_MSG_2023,
+04-NOV-26 06:59:43.430: ;;;  _parfile: PAYMENT.TB_CARD_VAN_MSG:CARD_VAN_MSG_2024,
+04-NOV-26 06:59:43.440: ;;;  _parfile: PAYMENT.TB_CARD_VAN_MSG:CARD_VAN_MSG_2025,
+04-NOV-26 06:59:43.447: ;;;  _parfile: PAYMENT.TB_CARD_VAN_MSG:CARD_VAN_MSG_2026,
+04-NOV-26 06:59:43.454: ;;;  _parfile: PAYMENT.TB_CARD_VAN_MSG:CARD_VAN_MSG_9999,
+04-NOV-26 06:59:43.463: ;;;  _parfile: PAYMENT.TB_PART_JOIN_INFO,AEGISPG.CANCEL_DELAY_LIST
+04-NOV-26 06:59:43.474: ;;;  parfile:  logfile=exp_table_dataonly_20261103_08.log
+04-NOV-26 06:59:43.483: ;;;  parfile:  dumpfile=exp_table_dataonly_20261103_08_%U.dmp
+04-NOV-26 06:59:43.491: ;;;  parfile:  directory=DBA_PUMP
+04-NOV-26 06:59:43.497: ;;; **************************************************************************
+04-NOV-26 06:59:43.826: Starting "SYSTEM"."DBC_EXP_20261103065622_08":  system/******** parfile=dbc_exp_20261103065622_08.par 
+04-NOV-26 06:59:44.391: W-1 Startup took 1 seconds
+04-NOV-26 06:59:46.615: W-2 Startup took 0 seconds
+04-NOV-26 06:59:47.115: W-1 Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+04-NOV-26 07:08:35.496: W-1 . . exported "PAYMENT"."TB_MAIL_DAILY_LOG"               117.6 GB 402271026 rows in 527 seconds using direct_path
+04-NOV-26 07:08:39.008: W-1 . . exported "PAYMENT"."TB_PART_JOIN_INFO"               665.7 MB 7834637 rows in 3 seconds using direct_path
+04-NOV-26 07:08:39.802: W-1 . . exported "AEGISPG"."CANCEL_DELAY_LIST"               9.685 MB  172563 rows in 0 seconds using direct_path
+04-NOV-26 07:10:17.365: W-1 . . exported "PAYMENT"."TB_CARD_VAN_MSG":"CARD_VAN_MSG_2023"  10.25 GB 41347030 rows in 98 seconds using direct_path
+04-NOV-26 07:12:59.770: W-1 . . exported "PAYMENT"."TB_CARD_VAN_MSG":"CARD_VAN_MSG_2024"  16.77 GB 67275528 rows in 162 seconds using direct_path
+04-NOV-26 07:15:05.518: W-2 . . exported "PAYMENT"."TB_VISA_AUTH"                    220.9 GB 2079198423 rows in 917 seconds using direct_path
+04-NOV-26 07:16:45.611: W-1 . . exported "PAYMENT"."TB_CARD_VAN_MSG":"CARD_VAN_MSG_2025"  23.44 GB 94197326 rows in 226 seconds using direct_path
+04-NOV-26 07:20:49.091: W-1 . . exported "PAYMENT"."TB_CARD_VAN_MSG":"CARD_VAN_MSG_2026"  25.31 GB 99345914 rows in 244 seconds using direct_path
+04-NOV-26 07:20:49.159: W-1 . . exported "PAYMENT"."TB_CARD_VAN_MSG":"CARD_VAN_MSG_9999"  27.19 KB       0 rows in 0 seconds using direct_path
+04-NOV-26 07:21:12.465: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202310"  5.546 GB 44505298 rows in 23 seconds using direct_path
+04-NOV-26 07:21:28.699: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202311"  3.777 GB 29978012 rows in 16 seconds using direct_path
+04-NOV-26 07:21:46.017: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202312"  4.024 GB 31884233 rows in 18 seconds using direct_path
+04-NOV-26 07:22:03.305: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202401"  4.038 GB 31997892 rows in 17 seconds using direct_path
+04-NOV-26 07:22:18.321: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202402"  3.489 GB 27627138 rows in 15 seconds using direct_path
+04-NOV-26 07:22:36.201: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202403"  4.171 GB 32994947 rows in 18 seconds using direct_path
+04-NOV-26 07:22:53.946: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202404"  4.146 GB 32753161 rows in 17 seconds using direct_path
+04-NOV-26 07:23:12.749: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202405"  4.457 GB 35151796 rows in 19 seconds using direct_path
+04-NOV-26 07:23:32.548: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202406"  4.717 GB 37244856 rows in 20 seconds using direct_path
+04-NOV-26 07:23:53.564: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202407"  4.916 GB 38849726 rows in 21 seconds using direct_path
+04-NOV-26 07:24:14.907: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202408"  5.049 GB 39803816 rows in 21 seconds using direct_path
+04-NOV-26 07:24:36.212: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202409"  4.926 GB 38784397 rows in 22 seconds using direct_path
+04-NOV-26 07:24:58.477: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202410"  5.091 GB 40060493 rows in 22 seconds using direct_path
+04-NOV-26 07:25:20.580: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202411"  5.189 GB 40824011 rows in 22 seconds using direct_path
+04-NOV-26 07:25:44.343: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202412"  5.511 GB 43312930 rows in 24 seconds using direct_path
+04-NOV-26 07:26:06.843: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202501"  5.249 GB 41234050 rows in 22 seconds using direct_path
+04-NOV-26 07:26:28.070: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202502"  5.033 GB 39534615 rows in 22 seconds using direct_path
+04-NOV-26 07:26:53.614: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202503"  5.898 GB 46306650 rows in 25 seconds using direct_path
+04-NOV-26 07:27:17.935: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202504"  5.748 GB 45006323 rows in 24 seconds using direct_path
+04-NOV-26 07:27:44.268: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202505"  6.080 GB 47543226 rows in 27 seconds using direct_path
+04-NOV-26 07:28:10.691: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202506"  6.231 GB 48734563 rows in 26 seconds using direct_path
+04-NOV-26 07:28:38.499: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202507"  6.581 GB 51536390 rows in 28 seconds using direct_path
+04-NOV-26 07:29:06.094: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202508"  6.410 GB 50124727 rows in 28 seconds using direct_path
+04-NOV-26 07:29:33.656: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202509"  6.417 GB 50230970 rows in 27 seconds using direct_path
+04-NOV-26 07:29:59.600: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202510"  6.015 GB 47047271 rows in 26 seconds using direct_path
+04-NOV-26 07:30:27.562: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202511"  6.516 GB 50957855 rows in 28 seconds using direct_path
+04-NOV-26 07:30:55.165: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202512"  6.422 GB 50276677 rows in 28 seconds using direct_path
+04-NOV-26 07:31:22.275: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202601"  6.336 GB 49577821 rows in 27 seconds using direct_path
+04-NOV-26 07:31:46.162: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202602"  5.568 GB 43549360 rows in 24 seconds using direct_path
+04-NOV-26 07:32:15.310: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202603"  6.771 GB 53020966 rows in 29 seconds using direct_path
+04-NOV-26 07:32:43.317: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202604"  6.562 GB 51492819 rows in 28 seconds using direct_path
+04-NOV-26 07:33:13.823: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202605"  6.992 GB 54851370 rows in 30 seconds using direct_path
+04-NOV-26 07:33:44.840: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202606"  7.170 GB 56349577 rows in 31 seconds using direct_path
+04-NOV-26 07:34:18.065: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202607"  7.579 GB 59587283 rows in 34 seconds using direct_path
+04-NOV-26 07:34:50.809: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202608"  7.591 GB 59647739 rows in 32 seconds using direct_path
+04-NOV-26 07:35:23.150: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202609"  7.375 GB 57981569 rows in 33 seconds using direct_path
+04-NOV-26 07:35:56.844: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202610"  7.787 GB 61117430 rows in 33 seconds using direct_path
+04-NOV-26 07:36:02.665: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202611"  862.8 MB 6611390 rows in 6 seconds using direct_path
+04-NOV-26 07:36:02.700: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_202612"   9.75 KB       0 rows in 0 seconds using direct_path
+04-NOV-26 07:36:02.734: W-1 . . exported "PAYMENT"."TB_MOID_VERIFY":"MOID_VERIFY_9999"   9.75 KB       0 rows in 0 seconds using direct_path
+04-NOV-26 07:36:17.878: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13137"  789.3 MB  786676 rows in 15 seconds using direct_path
+04-NOV-26 07:36:31.528: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13138"  790.6 MB  787924 rows in 14 seconds using direct_path
+04-NOV-26 07:36:48.767: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13139"  792.5 MB  789846 rows in 17 seconds using direct_path
+04-NOV-26 07:37:05.147: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13140"  791.5 MB  788622 rows in 17 seconds using direct_path
+04-NOV-26 07:37:19.098: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13141"  792.7 MB  790165 rows in 14 seconds using direct_path
+04-NOV-26 07:37:35.532: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13142"  791.6 MB  788855 rows in 16 seconds using direct_path
+04-NOV-26 07:37:49.256: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13143"  791.3 MB  788625 rows in 14 seconds using direct_path
+04-NOV-26 07:38:05.153: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13144"  791.7 MB  788823 rows in 16 seconds using direct_path
+04-NOV-26 07:38:22.001: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13145"  793.2 MB  790624 rows in 16 seconds using direct_path
+04-NOV-26 07:38:38.956: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13146"  792.4 MB  789899 rows in 17 seconds using direct_path
+04-NOV-26 07:38:56.532: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13147"  791.7 MB  788870 rows in 18 seconds using direct_path
+04-NOV-26 07:39:13.932: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13148"  791.0 MB  788127 rows in 17 seconds using direct_path
+04-NOV-26 07:39:31.214: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13149"  791.0 MB  788448 rows in 18 seconds using direct_path
+04-NOV-26 07:39:48.204: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13150"  791.9 MB  789100 rows in 17 seconds using direct_path
+04-NOV-26 07:40:05.608: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13151"  788.6 MB  785980 rows in 17 seconds using direct_path
+04-NOV-26 07:40:23.331: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13152"  792.1 MB  789365 rows in 18 seconds using direct_path
+04-NOV-26 07:40:39.221: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13153"  790.6 MB  787769 rows in 16 seconds using direct_path
+04-NOV-26 07:40:56.703: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13154"  791.3 MB  788698 rows in 17 seconds using direct_path
+04-NOV-26 07:41:14.111: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13155"  791.1 MB  788518 rows in 18 seconds using direct_path
+04-NOV-26 07:41:31.718: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13156"  791.6 MB  788737 rows in 17 seconds using direct_path
+04-NOV-26 07:41:49.207: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13157"  791.1 MB  788412 rows in 18 seconds using direct_path
+04-NOV-26 07:42:07.006: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13158"  791.6 MB  788871 rows in 18 seconds using direct_path
+04-NOV-26 07:42:24.661: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13159"  792.5 MB  789824 rows in 17 seconds using direct_path
+04-NOV-26 07:42:42.747: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13160"  790.3 MB  787790 rows in 18 seconds using direct_path
+04-NOV-26 07:43:01.230: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13161"  790.1 MB  787835 rows in 19 seconds using direct_path
+04-NOV-26 07:43:20.084: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13162"  789.8 MB  787109 rows in 19 seconds using direct_path
+04-NOV-26 07:43:39.771: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13163"  791.2 MB  788150 rows in 19 seconds using direct_path
+04-NOV-26 07:43:59.927: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13164"  790.5 MB  788016 rows in 20 seconds using direct_path
+04-NOV-26 07:44:20.340: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13165"  792.3 MB  789599 rows in 21 seconds using direct_path
+04-NOV-26 07:44:41.512: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13166"  789.8 MB  787037 rows in 21 seconds using direct_path
+04-NOV-26 07:45:03.485: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13167"  791.2 MB  788546 rows in 22 seconds using direct_path
+04-NOV-26 07:45:26.260: W-1 . . exported "PAYMENT"."TB_UI_AUTH_HISTORY":"SYS_P13168"  790.6 MB  787880 rows in 23 seconds using direct_path
+04-NOV-26 07:45:27.571: ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+04-NOV-26 07:45:27.889: W-2      Completed 81 TABLE_EXPORT/TABLE/TABLE_DATA objects in 2738 seconds
+04-NOV-26 07:45:28.838: W-2 Master table "SYSTEM"."DBC_EXP_20261103065622_08" successfully loaded/unloaded
+04-NOV-26 07:45:29.464: ******************************************************************************
+04-NOV-26 07:45:29.466: Dump file set for SYSTEM.DBC_EXP_20261103065622_08 is:
+04-NOV-26 07:45:29.470:   /mig/DBA_PUMP/exp_table_dataonly_20261103_08_01.dmp
+04-NOV-26 07:45:29.471:   /mig/DBA_PUMP/exp_table_dataonly_20261103_08_02.dmp
+04-NOV-26 07:45:29.788: Job "SYSTEM"."DBC_EXP_20261103065622_08" successfully completed at Wed Nov 4 07:45:29 2026 elapsed 0 00:45:48
