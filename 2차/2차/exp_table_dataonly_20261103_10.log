@@ -1,0 +1,98 @@
+;;; 
+Export: Release 19.0.0.0.0 - Production on Wed Nov 4 11:08:17 2026
+Version 19.16.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+04-NOV-26 11:08:19.448: ;;; **************************************************************************
+04-NOV-26 11:08:19.455: ;;; Parfile values:
+04-NOV-26 11:08:19.461: ;;;  parfile:  job_name=DBC_EXP_20261103065622_10
+04-NOV-26 11:08:19.469: ;;;  parfile:  flashback_scn=14275380917190
+04-NOV-26 11:08:19.478: ;;;  parfile:  logtime=ALL
+04-NOV-26 11:08:19.487: ;;;  parfile:  metrics=Y
+04-NOV-26 11:08:19.493: ;;;  parfile:  cluster=N
+04-NOV-26 11:08:19.499: ;;;  parfile:  parallel=2
+04-NOV-26 11:08:19.505: ;;;  parfile:  exclude=STATISTICS
+04-NOV-26 11:08:19.510: ;;;  parfile:  content=DATA_ONLY
+04-NOV-26 11:08:19.517: ;;;  parfile:  tables=HJIN.TRANS_DATA_REAL_VAN,PAYMENT.TB_TR_KEY:TR_KEY_202310,
+04-NOV-26 11:08:19.526: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202311,PAYMENT.TB_TR_KEY:TR_KEY_202312,
+04-NOV-26 11:08:19.536: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202401,PAYMENT.TB_TR_KEY:TR_KEY_202402,
+04-NOV-26 11:08:19.542: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202403,PAYMENT.TB_TR_KEY:TR_KEY_202404,
+04-NOV-26 11:08:19.548: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202405,PAYMENT.TB_TR_KEY:TR_KEY_202406,
+04-NOV-26 11:08:19.555: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202407,PAYMENT.TB_TR_KEY:TR_KEY_202408,
+04-NOV-26 11:08:19.563: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202409,PAYMENT.TB_TR_KEY:TR_KEY_202410,
+04-NOV-26 11:08:19.571: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202411,PAYMENT.TB_TR_KEY:TR_KEY_202412,
+04-NOV-26 11:08:19.588: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202501,PAYMENT.TB_TR_KEY:TR_KEY_202502,
+04-NOV-26 11:08:19.597: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202503,PAYMENT.TB_TR_KEY:TR_KEY_202504,
+04-NOV-26 11:08:19.604: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202505,PAYMENT.TB_TR_KEY:TR_KEY_202506,
+04-NOV-26 11:08:19.611: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202507,PAYMENT.TB_TR_KEY:TR_KEY_202508,
+04-NOV-26 11:08:19.620: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202509,PAYMENT.TB_TR_KEY:TR_KEY_202510,
+04-NOV-26 11:08:19.629: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202511,PAYMENT.TB_TR_KEY:TR_KEY_202512,
+04-NOV-26 11:08:19.641: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202601,PAYMENT.TB_TR_KEY:TR_KEY_202602,
+04-NOV-26 11:08:19.649: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202603,PAYMENT.TB_TR_KEY:TR_KEY_202604,
+04-NOV-26 11:08:19.656: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202605,PAYMENT.TB_TR_KEY:TR_KEY_202606,
+04-NOV-26 11:08:19.668: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202607,PAYMENT.TB_TR_KEY:TR_KEY_202608,
+04-NOV-26 11:08:19.678: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202609,PAYMENT.TB_TR_KEY:TR_KEY_202610,
+04-NOV-26 11:08:19.686: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_202611,PAYMENT.TB_TR_KEY:TR_KEY_202612,
+04-NOV-26 11:08:19.692: ;;;  _parfile: PAYMENT.TB_TR_KEY:TR_KEY_999999,PAYMENT.TB_BILLKEY_REQ,
+04-NOV-26 11:08:19.697: ;;;  _parfile: AEGISPG.LOGIN_HISTORY
+04-NOV-26 11:08:19.703: ;;;  parfile:  logfile=exp_table_dataonly_20261103_10.log
+04-NOV-26 11:08:19.711: ;;;  parfile:  dumpfile=exp_table_dataonly_20261103_10_%U.dmp
+04-NOV-26 11:08:19.719: ;;;  parfile:  directory=DBA_PUMP
+04-NOV-26 11:08:19.725: ;;; **************************************************************************
+04-NOV-26 11:08:20.123: Starting "SYSTEM"."DBC_EXP_20261103065622_10":  system/******** parfile=dbc_exp_20261103065622_10.par 
+04-NOV-26 11:08:20.722: W-1 Startup took 0 seconds
+04-NOV-26 11:08:23.123: W-2 Startup took 0 seconds
+04-NOV-26 11:08:23.598: W-1 Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+04-NOV-26 11:08:40.196: W-2 . . exported "PAYMENT"."TB_BILLKEY_REQ"                  384.0 MB 1434706 rows in 15 seconds using direct_path
+04-NOV-26 11:08:49.591: W-2 . . exported "AEGISPG"."LOGIN_HISTORY"                   26.58 MB  532131 rows in 9 seconds using direct_path
+04-NOV-26 11:09:44.118: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202310"       11.51 GB 26201425 rows in 54 seconds using direct_path
+04-NOV-26 11:10:38.088: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202311"       11.57 GB 26399796 rows in 54 seconds using direct_path
+04-NOV-26 11:11:49.966: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202312"       16.88 GB 37891752 rows in 71 seconds using direct_path
+04-NOV-26 11:12:24.750: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202401"       8.085 GB 18716872 rows in 35 seconds using direct_path
+04-NOV-26 11:12:58.756: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202402"       7.923 GB 18374465 rows in 34 seconds using direct_path
+04-NOV-26 11:13:33.355: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202403"       8.005 GB 18605924 rows in 35 seconds using direct_path
+04-NOV-26 11:14:07.917: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202404"       7.998 GB 18625465 rows in 34 seconds using direct_path
+04-NOV-26 11:14:43.189: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202405"       8.090 GB 18572552 rows in 36 seconds using direct_path
+04-NOV-26 11:15:17.305: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202406"       7.769 GB 17673566 rows in 34 seconds using direct_path
+04-NOV-26 11:15:51.735: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202407"       7.802 GB 17753007 rows in 34 seconds using direct_path
+04-NOV-26 11:16:23.063: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202408"       7.133 GB 16382403 rows in 32 seconds using direct_path
+04-NOV-26 11:16:52.543: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202409"       6.601 GB 15291562 rows in 29 seconds using direct_path
+04-NOV-26 11:17:24.265: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202410"       7.070 GB 16395970 rows in 32 seconds using direct_path
+04-NOV-26 11:17:55.318: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202411"       6.919 GB 16104187 rows in 31 seconds using direct_path
+04-NOV-26 11:18:30.095: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202412"       7.130 GB 16556898 rows in 35 seconds using direct_path
+04-NOV-26 11:19:02.072: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202501"       6.769 GB 15742362 rows in 32 seconds using direct_path
+04-NOV-26 11:19:38.099: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202502"       6.587 GB 15317304 rows in 36 seconds using direct_path
+04-NOV-26 11:20:16.986: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202503"       7.481 GB 17408240 rows in 38 seconds using direct_path
+04-NOV-26 11:20:52.252: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202504"       7.677 GB 17935255 rows in 36 seconds using direct_path
+04-NOV-26 11:21:26.234: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202505"       7.936 GB 18617180 rows in 34 seconds using direct_path
+04-NOV-26 11:22:11.628: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202506"       7.677 GB 18165162 rows in 45 seconds using direct_path
+04-NOV-26 11:22:58.151: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202507"       8.631 GB 20339463 rows in 47 seconds using direct_path
+04-NOV-26 11:23:36.471: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202508"       8.106 GB 19080010 rows in 38 seconds using direct_path
+04-NOV-26 11:24:17.569: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202509"       8.065 GB 19207231 rows in 41 seconds using direct_path
+04-NOV-26 11:24:53.440: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202510"       7.677 GB 18264923 rows in 36 seconds using direct_path
+04-NOV-26 11:25:30.771: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202511"       8.009 GB 19167058 rows in 37 seconds using direct_path
+04-NOV-26 11:26:08.351: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202512"       8.588 GB 20417266 rows in 38 seconds using direct_path
+04-NOV-26 11:26:44.018: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202601"       7.956 GB 18928782 rows in 36 seconds using direct_path
+04-NOV-26 11:27:15.491: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202602"       7.004 GB 16821760 rows in 31 seconds using direct_path
+04-NOV-26 11:27:51.584: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202603"       8.298 GB 19960518 rows in 36 seconds using direct_path
+04-NOV-26 11:28:28.635: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202604"       8.440 GB 20481418 rows in 37 seconds using direct_path
+04-NOV-26 11:29:06.592: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202605"       8.541 GB 20860341 rows in 38 seconds using direct_path
+04-NOV-26 11:29:45.792: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202606"       8.718 GB 21354869 rows in 39 seconds using direct_path
+04-NOV-26 11:30:27.204: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202607"       9.179 GB 22062161 rows in 42 seconds using direct_path
+04-NOV-26 11:31:07.849: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202608"       8.816 GB 21197761 rows in 40 seconds using direct_path
+04-NOV-26 11:31:46.430: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202609"       8.851 GB 21526249 rows in 39 seconds using direct_path
+04-NOV-26 11:32:28.508: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202610"       9.273 GB 22676166 rows in 42 seconds using direct_path
+04-NOV-26 11:32:41.274: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202611"       992.6 MB 2366795 rows in 13 seconds using direct_path
+04-NOV-26 11:32:41.318: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_202612"       11.08 KB       0 rows in 0 seconds using direct_path
+04-NOV-26 11:32:41.358: W-2 . . exported "PAYMENT"."TB_TR_KEY":"TR_KEY_999999"       11.08 KB       0 rows in 0 seconds using direct_path
+04-NOV-26 11:47:24.181: W-1 . . exported "HJIN"."TRANS_DATA_REAL_VAN"                562.5 GB 938279798 rows in 2340 seconds using direct_path
+04-NOV-26 11:47:25.616: ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+04-NOV-26 11:47:25.982: W-2      Completed 43 TABLE_EXPORT/TABLE/TABLE_DATA objects in 2340 seconds
+04-NOV-26 11:47:26.884: W-2 Master table "SYSTEM"."DBC_EXP_20261103065622_10" successfully loaded/unloaded
+04-NOV-26 11:47:27.546: ******************************************************************************
+04-NOV-26 11:47:27.547: Dump file set for SYSTEM.DBC_EXP_20261103065622_10 is:
+04-NOV-26 11:47:27.550:   /mig/DBA_PUMP/exp_table_dataonly_20261103_10_01.dmp
+04-NOV-26 11:47:27.551:   /mig/DBA_PUMP/exp_table_dataonly_20261103_10_02.dmp
+04-NOV-26 11:47:27.914: Job "SYSTEM"."DBC_EXP_20261103065622_10" successfully completed at Wed Nov 4 11:47:27 2026 elapsed 0 00:39:09

@@ -1,0 +1,471 @@
+;;; 
+Export: Release 19.0.0.0.0 - Production on Tue Nov 3 14:32:22 2026
+Version 19.16.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+03-NOV-26 14:32:24.952: ;;; **************************************************************************
+03-NOV-26 14:32:24.961: ;;; Parfile values:
+03-NOV-26 14:32:24.968: ;;;  parfile:  cluster=N
+03-NOV-26 14:32:24.975: ;;;  parfile:  job_name=DBC_EXP_20261103065622_06
+03-NOV-26 14:32:24.986: ;;;  parfile:  flashback_scn=14275270401578
+03-NOV-26 14:32:24.994: ;;;  parfile:  logtime=ALL
+03-NOV-26 14:32:25.002: ;;;  parfile:  metrics=Y
+03-NOV-26 14:32:25.017: ;;;  parfile:  parallel=2
+03-NOV-26 14:32:25.029: ;;;  parfile:  exclude=STATISTICS
+03-NOV-26 14:32:25.039: ;;;  parfile:  content=DATA_ONLY
+03-NOV-26 14:32:25.049: ;;;  parfile:  tables=PAYMENT.TB_VACCT_INPUT_HISTORY,PAYMENT.TB_UT_PAY_HISTORY,
+03-NOV-26 14:32:25.057: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202310,
+03-NOV-26 14:32:25.067: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202311,
+03-NOV-26 14:32:25.079: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202312,
+03-NOV-26 14:32:25.086: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202401,
+03-NOV-26 14:32:25.095: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202402,
+03-NOV-26 14:32:25.102: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202403,
+03-NOV-26 14:32:25.119: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202404,
+03-NOV-26 14:32:25.131: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202405,
+03-NOV-26 14:32:25.138: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202406,
+03-NOV-26 14:32:25.145: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202407,
+03-NOV-26 14:32:25.153: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202408,
+03-NOV-26 14:32:25.160: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202409,
+03-NOV-26 14:32:25.166: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202410,
+03-NOV-26 14:32:25.173: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202411,
+03-NOV-26 14:32:25.181: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202412,
+03-NOV-26 14:32:25.189: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202501,
+03-NOV-26 14:32:25.195: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202502,
+03-NOV-26 14:32:25.204: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202503,
+03-NOV-26 14:32:25.211: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202504,
+03-NOV-26 14:32:25.219: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202505,
+03-NOV-26 14:32:25.227: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202506,
+03-NOV-26 14:32:25.234: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202507,
+03-NOV-26 14:32:25.241: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202508,
+03-NOV-26 14:32:25.247: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202509,
+03-NOV-26 14:32:25.257: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202510,
+03-NOV-26 14:32:25.271: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202511,
+03-NOV-26 14:32:25.283: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202512,
+03-NOV-26 14:32:25.291: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202601,
+03-NOV-26 14:32:25.297: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202602,
+03-NOV-26 14:32:25.311: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202603,
+03-NOV-26 14:32:25.318: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202604,
+03-NOV-26 14:32:25.328: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202605,
+03-NOV-26 14:32:25.339: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202606,
+03-NOV-26 14:32:25.346: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202607,
+03-NOV-26 14:32:25.353: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202608,
+03-NOV-26 14:32:25.362: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202609,
+03-NOV-26 14:32:25.369: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202610,
+03-NOV-26 14:32:25.377: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202611,
+03-NOV-26 14:32:25.393: ;;;  _parfile: NTS.NTSCASHMAS:NTSCASHMAS_202612,NTS.NTSCASHMAS:NTSCASHMAS_9999,
+03-NOV-26 14:32:25.403: ;;;  _parfile: PAYMENT.MPIHISTORY,THEBILL.BPYPAYMENT,
+03-NOV-26 14:32:25.411: ;;;  _parfile: PAYMENT.TB_TRANS_REQ_CC:TRANS_REQ_CC_2023,
+03-NOV-26 14:32:25.417: ;;;  _parfile: PAYMENT.TB_TRANS_REQ_CC:TRANS_REQ_CC_2024,
+03-NOV-26 14:32:25.424: ;;;  _parfile: PAYMENT.TB_TRANS_REQ_CC:TRANS_REQ_CC_2025,
+03-NOV-26 14:32:25.434: ;;;  _parfile: PAYMENT.TB_TRANS_REQ_CC:TRANS_REQ_CC_2026,
+03-NOV-26 14:32:25.440: ;;;  _parfile: PAYMENT.TB_TRANS_REQ_CC:TRANS_REQ_CC_9999,
+03-NOV-26 14:32:25.449: ;;;  _parfile: PAYMENT2.TB_CARD_TRANS,THEBILL.TRANSDATAAPI,
+03-NOV-26 14:32:25.456: ;;;  _parfile: PAYMENT.TB_CMSBANK_REQ,PAYMENT.TB_CMSBANK_TRANS,
+03-NOV-26 14:32:25.465: ;;;  _parfile: AEGISPG.TB_APG_ORDER_HISTORY,PAYMENT.TB_CELLPHONE_TRANS,
+03-NOV-26 14:32:25.474: ;;;  _parfile: HJIN.REAL_VAN_PAYMENT,
+03-NOV-26 14:32:25.481: ;;;  _parfile: PAYMENT.TB_TRANS_HISTORY:TRANS_HISTORY_202610,
+03-NOV-26 14:32:25.490: ;;;  _parfile: PAYMENT.TB_TRANS_HISTORY:TRANS_HISTORY_202611,
+03-NOV-26 14:32:25.497: ;;;  _parfile: PAYMENT.TB_TRANS_HISTORY:TRANS_HISTORY_202612,
+03-NOV-26 14:32:25.506: ;;;  _parfile: PAYMENT.TB_TRANS_HISTORY:TRANS_HISTORY_999999,
+03-NOV-26 14:32:25.515: ;;;  _parfile: PAYMENT.TB_TRANS_STATISTICS,PAYMENT2.SCREDIT,
+03-NOV-26 14:32:25.521: ;;;  _parfile: PAYMENT2.TB_TRANS_REQ,PAYMENT.TB_UT_API_HISTORY,
+03-NOV-26 14:32:25.528: ;;;  _parfile: PAYMENT2.TB_TRANS_HISTORY,PAYMENT.TB_UI_GSLB_TID_VERIFY,
+03-NOV-26 14:32:25.535: ;;;  _parfile: PAYMENT2.TB_CELLPHONE_TRANS
+03-NOV-26 14:32:25.541: ;;;  parfile:  logfile=exp_table_dataonly_20261103_06.log
+03-NOV-26 14:32:25.547: ;;;  parfile:  dumpfile=exp_table_dataonly_20261103_06_%U.dmp
+03-NOV-26 14:32:25.554: ;;;  parfile:  directory=DBA_PUMP
+03-NOV-26 14:32:25.561: ;;; **************************************************************************
+03-NOV-26 14:32:25.956: Starting "SYSTEM"."DBC_EXP_20261103065622_06":  system/******** parfile=dbc_exp_20261103065622_06.par 
+03-NOV-26 14:32:26.544: W-1 Startup took 0 seconds
+03-NOV-26 14:32:28.839: W-2 Startup took 0 seconds
+03-NOV-26 14:32:29.370: W-1 Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+03-NOV-26 14:35:05.973: W-2 . . exported "AEGISPG"."TB_APG_ORDER_HISTORY"            37.85 GB 37396707 rows in 154 seconds using direct_path
+03-NOV-26 14:36:36.163: W-1 . . exported "PAYMENT"."MPIHISTORY"                      57.41 GB 224461814 rows in 245 seconds using direct_path
+03-NOV-26 14:39:34.465: W-2 . . exported "PAYMENT"."TB_VACCT_INPUT_HISTORY"          62.52 GB 397602708 rows in 268 seconds using direct_path
+03-NOV-26 14:41:58.777: W-2 . . exported "PAYMENT"."TB_TRANS_STATISTICS"             34.29 GB 179248993 rows in 143 seconds using direct_path
+03-NOV-26 14:42:55.171: W-1 . . exported "PAYMENT"."TB_CELLPHONE_TRANS"              37.14 GB 87708644 rows in 379 seconds using direct_path
+03-NOV-26 14:43:00.898: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2020"  6.361 GB 14196176 rows in 61 seconds using direct_path
+03-NOV-26 14:43:24.524: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201906"       2.498 GB 11430153 rows in 23 seconds using direct_path
+03-NOV-26 14:43:38.337: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2020"         4.152 GB 19208914 rows in 43 seconds using direct_path
+03-NOV-26 14:43:46.561: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201912"       2.287 GB 10557590 rows in 21 seconds using direct_path
+03-NOV-26 14:44:01.692: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201906"  2.385 GB 9083420 rows in 22 seconds using direct_path
+03-NOV-26 14:44:18.937: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2020"  3.634 GB 14570147 rows in 16 seconds using direct_path
+03-NOV-26 14:44:22.082: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2020"  3.716 GB 14489817 rows in 35 seconds using direct_path
+03-NOV-26 14:44:39.217: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201912"  2.096 GB 7970590 rows in 20 seconds using direct_path
+03-NOV-26 14:44:48.559: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201805"  914.5 MB 1964348 rows in 9 seconds using direct_path
+03-NOV-26 14:44:57.585: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201807"  905.3 MB 1949341 rows in 8 seconds using direct_path
+03-NOV-26 14:45:06.988: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201703"  910.6 MB 2119102 rows in 8 seconds using direct_path
+03-NOV-26 14:45:16.280: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201705"  908.3 MB 2120892 rows in 9 seconds using direct_path
+03-NOV-26 14:45:25.299: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201806"  884.6 MB 1911947 rows in 9 seconds using direct_path
+03-NOV-26 14:45:34.274: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201706"  897.9 MB 2143042 rows in 9 seconds using direct_path
+03-NOV-26 14:45:43.419: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201704"  891.3 MB 2078663 rows in 9 seconds using direct_path
+03-NOV-26 14:45:52.957: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201810"  880.6 MB 1884312 rows in 8 seconds using direct_path
+03-NOV-26 14:46:01.998: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201804"  866.0 MB 1859337 rows in 8 seconds using direct_path
+03-NOV-26 14:46:10.678: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201803"  860.7 MB 1844785 rows in 8 seconds using direct_path
+03-NOV-26 14:46:19.597: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201709"  842.8 MB 1788212 rows in 8 seconds using direct_path
+03-NOV-26 14:46:28.449: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201811"  841.6 MB 1806695 rows in 8 seconds using direct_path
+03-NOV-26 14:46:37.110: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201809"  837.0 MB 1797853 rows in 8 seconds using direct_path
+03-NOV-26 14:46:46.131: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201808"  839.7 MB 1808916 rows in 9 seconds using direct_path
+03-NOV-26 14:46:54.930: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201711"  816.0 MB 1733513 rows in 8 seconds using direct_path
+03-NOV-26 14:47:03.822: W-2 . . exported "HJIN"."REAL_VAN_PAYMENT"                   36.23 GB 158056013 rows in 161 seconds using direct_path
+03-NOV-26 14:47:03.837: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201701"  826.7 MB 1923841 rows in 8 seconds using direct_path
+03-NOV-26 14:47:12.193: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201702"  824.4 MB 1926169 rows in 8 seconds using direct_path
+03-NOV-26 14:47:12.893: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201812"  806.3 MB 1729220 rows in 8 seconds using direct_path
+03-NOV-26 14:47:20.416: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201710"  803.4 MB 1714447 rows in 8 seconds using direct_path
+03-NOV-26 14:47:21.334: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201707"  805.9 MB 1895781 rows in 8 seconds using direct_path
+03-NOV-26 14:47:28.591: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201611"  800.6 MB 1917429 rows in 7 seconds using direct_path
+03-NOV-26 14:47:29.763: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201612"  795.0 MB 1906664 rows in 7 seconds using direct_path
+03-NOV-26 14:47:36.788: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201708"  794.1 MB 1741710 rows in 7 seconds using direct_path
+03-NOV-26 14:47:38.369: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201610"  793.1 MB 1900690 rows in 8 seconds using direct_path
+03-NOV-26 14:47:44.755: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201901"  775.0 MB 1666807 rows in 7 seconds using direct_path
+03-NOV-26 14:47:46.654: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201712"  756.6 MB 1608702 rows in 7 seconds using direct_path
+03-NOV-26 14:47:52.564: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201801"  757.7 MB 1620745 rows in 7 seconds using direct_path
+03-NOV-26 14:47:54.681: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201802"  742.3 MB 1598082 rows in 7 seconds using direct_path
+03-NOV-26 14:48:00.218: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201609"  743.5 MB 1783875 rows in 7 seconds using direct_path
+03-NOV-26 14:48:02.451: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201903"  715.1 MB 1526078 rows in 7 seconds using direct_path
+03-NOV-26 14:48:07.866: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201904"  713.6 MB 1522187 rows in 7 seconds using direct_path
+03-NOV-26 14:48:10.342: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201608"  713.8 MB 1716976 rows in 7 seconds using direct_path
+03-NOV-26 14:48:14.993: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201607"  701.2 MB 1680105 rows in 6 seconds using direct_path
+03-NOV-26 14:48:17.722: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201606"  670.5 MB 1598125 rows in 6 seconds using direct_path
+03-NOV-26 14:48:21.825: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201902"  645.7 MB 1385978 rows in 6 seconds using direct_path
+03-NOV-26 14:48:24.995: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201905"  644.6 MB 1369034 rows in 6 seconds using direct_path
+03-NOV-26 14:48:28.675: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201605"  660.8 MB 1568469 rows in 6 seconds using direct_path
+03-NOV-26 14:48:33.811: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201703"  619.1 MB 2206020 rows in 4 seconds using direct_path
+03-NOV-26 14:48:33.937: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201907"  637.0 MB 1361737 rows in 8 seconds using direct_path
+03-NOV-26 14:48:37.108: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201705"  614.2 MB 2195860 rows in 3 seconds using direct_path
+03-NOV-26 14:48:40.517: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201807"       599.4 MB 2645612 rows in 6 seconds using direct_path
+03-NOV-26 14:48:43.769: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201906"  624.7 MB 1337781 rows in 6 seconds using direct_path
+03-NOV-26 14:48:43.979: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201706"  608.6 MB 2221468 rows in 2 seconds using direct_path
+03-NOV-26 14:48:47.070: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201704"  603.9 MB 2155304 rows in 3 seconds using direct_path
+03-NOV-26 14:48:50.699: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201703"  609.5 MB 2205599 rows in 6 seconds using direct_path
+03-NOV-26 14:48:53.317: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201706"  608.9 MB 2236753 rows in 6 seconds using direct_path
+03-NOV-26 14:48:57.308: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201909"  613.2 MB 1312092 rows in 6 seconds using direct_path
+03-NOV-26 14:48:59.178: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201805"       583.2 MB 2571426 rows in 6 seconds using direct_path
+03-NOV-26 14:49:03.895: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201705"  603.4 MB 2200551 rows in 6 seconds using direct_path
+03-NOV-26 14:49:05.638: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201910"  609.3 MB 1306477 rows in 6 seconds using direct_path
+03-NOV-26 14:49:10.483: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201911"  605.0 MB 1295275 rows in 6 seconds using direct_path
+03-NOV-26 14:49:11.683: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201810"       583.9 MB 2584323 rows in 5 seconds using direct_path
+03-NOV-26 14:49:16.530: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201806"       570.0 MB 2516290 rows in 5 seconds using direct_path
+03-NOV-26 14:49:18.025: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201704"  592.8 MB 2154903 rows in 6 seconds using direct_path
+03-NOV-26 14:49:22.562: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201707"       564.1 MB 2191830 rows in 5 seconds using direct_path
+03-NOV-26 14:49:23.995: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201808"       571.7 MB 2536534 rows in 5 seconds using direct_path
+03-NOV-26 14:49:29.187: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201603"  611.7 MB 1439025 rows in 6 seconds using direct_path
+03-NOV-26 14:49:30.324: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201604"  603.8 MB 1427443 rows in 6 seconds using direct_path
+03-NOV-26 14:49:35.506: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201912"  587.2 MB 1262190 rows in 6 seconds using direct_path
+03-NOV-26 14:49:36.417: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201908"  581.1 MB 1248422 rows in 6 seconds using direct_path
+03-NOV-26 14:49:38.644: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201701"  560.4 MB 1999590 rows in 2 seconds using direct_path
+03-NOV-26 14:49:39.565: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201611"  560.0 MB 1993672 rows in 2 seconds using direct_path
+03-NOV-26 14:49:41.746: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201702"  560.1 MB 1999477 rows in 2 seconds using direct_path
+03-NOV-26 14:49:44.954: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201612"  557.3 MB 1984285 rows in 2 seconds using direct_path
+03-NOV-26 14:49:45.682: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201706"       545.6 MB 2144258 rows in 5 seconds using direct_path
+03-NOV-26 14:49:48.183: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201610"  555.4 MB 1976122 rows in 3 seconds using direct_path
+03-NOV-26 14:49:51.141: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201811"       554.7 MB 2442498 rows in 5 seconds using direct_path
+03-NOV-26 14:49:54.313: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201804"       550.8 MB 2429602 rows in 6 seconds using direct_path
+03-NOV-26 14:49:56.718: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201705"       538.1 MB 2120249 rows in 5 seconds using direct_path
+03-NOV-26 14:50:00.134: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201703"       539.2 MB 2116436 rows in 5 seconds using direct_path
+03-NOV-26 14:50:02.577: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201707"  546.7 MB 1982601 rows in 5 seconds using direct_path
+03-NOV-26 14:50:06.418: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201701"  551.4 MB 1999789 rows in 6 seconds using direct_path
+03-NOV-26 14:50:08.320: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201704"       528.7 MB 2078337 rows in 5 seconds using direct_path
+03-NOV-26 14:50:11.302: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201707"  539.9 MB 1974497 rows in 3 seconds using direct_path
+03-NOV-26 14:50:12.398: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201702"  548.9 MB 1999262 rows in 5 seconds using direct_path
+03-NOV-26 14:50:16.996: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201809"       538.3 MB 2369606 rows in 5 seconds using direct_path
+03-NOV-26 14:50:18.278: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201803"       530.5 MB 2341744 rows in 5 seconds using direct_path
+03-NOV-26 14:50:22.658: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201611"  544.7 MB 1993570 rows in 5 seconds using direct_path
+03-NOV-26 14:50:24.405: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201612"  541.3 MB 1984228 rows in 6 seconds using direct_path
+03-NOV-26 14:50:25.627: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201609"  523.9 MB 1862549 rows in 2 seconds using direct_path
+03-NOV-26 14:50:30.583: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201610"  539.2 MB 1976275 rows in 5 seconds using direct_path
+03-NOV-26 14:50:31.286: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201708"       507.6 MB 2141020 rows in 5 seconds using direct_path
+03-NOV-26 14:50:36.545: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201805"  534.2 MB 2019893 rows in 5 seconds using direct_path
+03-NOV-26 14:50:36.638: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201807"  530.9 MB 2005990 rows in 5 seconds using direct_path
+03-NOV-26 14:50:42.397: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201709"       500.3 MB 2185073 rows in 5 seconds using direct_path
+03-NOV-26 14:50:43.086: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201601"  538.6 MB 1272738 rows in 5 seconds using direct_path
+03-NOV-26 14:50:48.081: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201812"       509.9 MB 2252325 rows in 5 seconds using direct_path
+03-NOV-26 14:50:49.076: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201602"  535.0 MB 1268472 rows in 6 seconds using direct_path
+03-NOV-26 14:50:53.560: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201806"  518.2 MB 1968154 rows in 5 seconds using direct_path
+03-NOV-26 14:50:55.007: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201810"  517.9 MB 1937119 rows in 6 seconds using direct_path
+03-NOV-26 14:50:56.414: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201608"  498.5 MB 1774979 rows in 2 seconds using direct_path
+03-NOV-26 14:51:00.745: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201702"       490.3 MB 1927332 rows in 5 seconds using direct_path
+03-NOV-26 14:51:01.821: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201701"       489.5 MB 1923942 rows in 4 seconds using direct_path
+03-NOV-26 14:51:06.523: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201611"       488.7 MB 1916474 rows in 5 seconds using direct_path
+03-NOV-26 14:51:07.184: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201612"       486.9 MB 1908870 rows in 4 seconds using direct_path
+03-NOV-26 14:51:12.351: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201804"  511.1 MB 1921214 rows in 5 seconds using direct_path
+03-NOV-26 14:51:12.461: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201711"       489.4 MB 2140621 rows in 5 seconds using direct_path
+03-NOV-26 14:51:18.066: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201610"       484.9 MB 1901250 rows in 5 seconds using direct_path
+03-NOV-26 14:51:18.123: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201803"  511.3 MB 1915315 rows in 5 seconds using direct_path
+03-NOV-26 14:51:21.258: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201607"  489.4 MB 1736404 rows in 2 seconds using direct_path
+03-NOV-26 14:51:23.549: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201609"  507.9 MB 1862588 rows in 5 seconds using direct_path
+03-NOV-26 14:51:26.573: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201709"  505.3 MB 1859167 rows in 5 seconds using direct_path
+03-NOV-26 14:51:28.670: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201710"       476.1 MB 2080124 rows in 4 seconds using direct_path
+03-NOV-26 14:51:31.564: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201801"       472.1 MB 2066141 rows in 4 seconds using direct_path
+03-NOV-26 14:51:33.744: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201809"  493.0 MB 1854966 rows in 4 seconds using direct_path
+03-NOV-26 14:51:36.808: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201708"  489.8 MB 1823630 rows in 4 seconds using direct_path
+03-NOV-26 14:51:39.143: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201808"  493.0 MB 1865452 rows in 5 seconds using direct_path
+03-NOV-26 14:51:41.996: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201711"  487.6 MB 1799492 rows in 4 seconds using direct_path
+03-NOV-26 14:51:44.402: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201811"  490.8 MB 1845537 rows in 5 seconds using direct_path
+03-NOV-26 14:51:45.093: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201805"  488.8 MB 2035131 rows in 2 seconds using direct_path
+03-NOV-26 14:51:47.179: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201807"  499.1 MB 2021344 rows in 2 seconds using direct_path
+03-NOV-26 14:51:47.857: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201606"  468.5 MB 1659449 rows in 2 seconds using direct_path
+03-NOV-26 14:51:52.235: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201802"       461.9 MB 2037931 rows in 5 seconds using direct_path
+03-NOV-26 14:51:52.967: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201608"  481.5 MB 1775099 rows in 4 seconds using direct_path
+03-NOV-26 14:51:57.399: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201712"       455.4 MB 1996437 rows in 5 seconds using direct_path
+03-NOV-26 14:51:58.101: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201710"  478.1 MB 1775556 rows in 4 seconds using direct_path
+03-NOV-26 14:52:00.508: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201605"  460.5 MB 1624651 rows in 2 seconds using direct_path
+03-NOV-26 14:52:02.645: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201609"       453.6 MB 1780082 rows in 4 seconds using direct_path
+03-NOV-26 14:52:05.323: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201806"  475.0 MB 1980177 rows in 2 seconds using direct_path
+03-NOV-26 14:52:05.489: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201607"  473.6 MB 1736390 rows in 4 seconds using direct_path
+03-NOV-26 14:52:08.078: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201810"  491.6 MB 1953877 rows in 2 seconds using direct_path
+03-NOV-26 14:52:10.581: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201708"  446.5 MB 1828016 rows in 2 seconds using direct_path
+03-NOV-26 14:52:10.682: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201812"  471.4 MB 1770219 rows in 4 seconds using direct_path
+03-NOV-26 14:52:13.209: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201803"  464.2 MB 1927877 rows in 2 seconds using direct_path
+03-NOV-26 14:52:13.879: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201804"  465.0 MB 1934835 rows in 2 seconds using direct_path
+03-NOV-26 14:52:17.918: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201608"       437.0 MB 1717479 rows in 4 seconds using direct_path
+03-NOV-26 14:52:18.630: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201606"  457.0 MB 1659446 rows in 4 seconds using direct_path
+03-NOV-26 14:52:20.570: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201709"  456.7 MB 1869977 rows in 2 seconds using direct_path
+03-NOV-26 14:52:23.249: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201712"  452.2 MB 1675492 rows in 4 seconds using direct_path
+03-NOV-26 14:52:25.109: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201607"       428.8 MB 1679678 rows in 4 seconds using direct_path
+03-NOV-26 14:52:28.030: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201801"  451.3 MB 1687324 rows in 5 seconds using direct_path
+03-NOV-26 14:52:29.868: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201605"  449.4 MB 1624680 rows in 4 seconds using direct_path
+03-NOV-26 14:52:30.756: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201811"  469.9 MB 1866096 rows in 2 seconds using direct_path
+03-NOV-26 14:52:32.518: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201809"  467.3 MB 1864793 rows in 2 seconds using direct_path
+03-NOV-26 14:52:33.383: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201808"  468.1 MB 1872993 rows in 2 seconds using direct_path
+03-NOV-26 14:52:35.026: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201603"  427.1 MB 1503865 rows in 2 seconds using direct_path
+03-NOV-26 14:52:35.930: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201711"  441.8 MB 1811934 rows in 1 seconds using direct_path
+03-NOV-26 14:52:38.501: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201604"  422.8 MB 1489850 rows in 2 seconds using direct_path
+03-NOV-26 14:52:39.723: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201802"  438.4 MB 1655837 rows in 4 seconds using direct_path
+03-NOV-26 14:52:41.070: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201710"  435.7 MB 1785909 rows in 2 seconds using direct_path
+03-NOV-26 14:52:42.308: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201812"  451.6 MB 1790771 rows in 2 seconds using direct_path
+03-NOV-26 14:52:45.450: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201606"       409.3 MB 1599267 rows in 4 seconds using direct_path
+03-NOV-26 14:52:47.023: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201603"  422.8 MB 1503753 rows in 5 seconds using direct_path
+03-NOV-26 14:52:49.540: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201901"  437.0 MB 1734693 rows in 2 seconds using direct_path
+03-NOV-26 14:52:49.825: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201605"       402.0 MB 1567892 rows in 3 seconds using direct_path
+03-NOV-26 14:52:52.247: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201712"  407.7 MB 1681518 rows in 2 seconds using direct_path
+03-NOV-26 14:52:54.042: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201604"  415.8 MB 1489842 rows in 4 seconds using direct_path
+03-NOV-26 14:52:54.778: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201801"  407.3 MB 1692690 rows in 2 seconds using direct_path
+03-NOV-26 14:52:56.420: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201802"  398.7 MB 1660929 rows in 2 seconds using direct_path
+03-NOV-26 14:52:57.093: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201602"  374.7 MB 1321272 rows in 1 seconds using direct_path
+03-NOV-26 14:52:58.881: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201903"  404.1 MB 1582739 rows in 1 seconds using direct_path
+03-NOV-26 14:53:01.085: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201603"       369.6 MB 1437417 rows in 4 seconds using direct_path
+03-NOV-26 14:53:01.307: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201904"  401.4 MB 1571827 rows in 2 seconds using direct_path
+03-NOV-26 14:53:03.656: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201601"  365.3 MB 1325945 rows in 1 seconds using direct_path
+03-NOV-26 14:53:05.028: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201604"       366.8 MB 1427547 rows in 4 seconds using direct_path
+03-NOV-26 14:53:07.808: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201601"  370.1 MB 1326076 rows in 3 seconds using direct_path
+03-NOV-26 14:53:09.031: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201602"  367.0 MB 1321312 rows in 4 seconds using direct_path
+03-NOV-26 14:53:11.996: W-1 . . exported "PAYMENT2"."TB_CELLPHONE_TRANS"             375.6 MB 1143592 rows in 3 seconds using direct_path
+03-NOV-26 14:53:12.708: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201601"       335.0 MB 1272878 rows in 3 seconds using direct_path
+03-NOV-26 14:53:14.248: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201902"  365.3 MB 1442438 rows in 2 seconds using direct_path
+03-NOV-26 14:53:14.948: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201905"  364.3 MB 1418035 rows in 1 seconds using direct_path
+03-NOV-26 14:53:16.513: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201907"  361.9 MB 1411976 rows in 2 seconds using direct_path
+03-NOV-26 14:53:18.563: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_201602"       324.7 MB 1267930 rows in 3 seconds using direct_path
+03-NOV-26 14:53:18.824: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201906"  354.8 MB 1384977 rows in 1 seconds using direct_path
+03-NOV-26 14:53:20.790: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201909"  346.7 MB 1352299 rows in 1 seconds using direct_path
+03-NOV-26 14:53:21.051: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201910"  344.7 MB 1345001 rows in 2 seconds using direct_path
+03-NOV-26 14:53:22.969: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201911"  342.4 MB 1332965 rows in 1 seconds using direct_path
+03-NOV-26 14:53:23.186: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201912"  334.6 MB 1303012 rows in 2 seconds using direct_path
+03-NOV-26 14:53:25.042: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201908"  330.0 MB 1291413 rows in 2 seconds using direct_path
+03-NOV-26 14:53:25.305: W-1 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201512"  144.7 MB  344400 rows in 2 seconds using direct_path
+03-NOV-26 14:56:54.541: W-2 . . exported "THEBILL"."TRANSDATAAPI"                    47.64 GB 93435009 rows in 209 seconds using direct_path
+03-NOV-26 14:56:56.193: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201512"  98.70 MB  359147 rows in 1 seconds using direct_path
+03-NOV-26 15:01:06.137: W-1 . . exported "PAYMENT"."TB_CMSBANK_REQ"                  48.71 GB 120282242 rows in 460 seconds using direct_path
+03-NOV-26 15:01:07.697: W-1 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2015"         91.53 MB  344382 rows in 1 seconds using direct_path
+03-NOV-26 15:01:09.215: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2012"  81.92 MB  324410 rows in 1 seconds using direct_path
+03-NOV-26 15:01:10.287: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2012"  74.61 MB  324409 rows in 1 seconds using direct_path
+03-NOV-26 15:01:11.075: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201301"  6.420 MB   25277 rows in 1 seconds using direct_path
+03-NOV-26 15:01:11.813: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201301"  5.848 MB   25277 rows in 0 seconds using direct_path
+03-NOV-26 15:01:12.612: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201303"  5.743 MB   22450 rows in 0 seconds using direct_path
+03-NOV-26 15:01:13.412: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201302"  5.621 MB   22063 rows in 0 seconds using direct_path
+03-NOV-26 15:01:14.205: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201304"  5.559 MB   21790 rows in 0 seconds using direct_path
+03-NOV-26 15:01:14.985: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201302"  5.116 MB   22062 rows in 0 seconds using direct_path
+03-NOV-26 15:01:15.079: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201303"  5.227 MB   22450 rows in 1 seconds using direct_path
+03-NOV-26 15:01:15.857: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201304"  5.072 MB   21789 rows in 0 seconds using direct_path
+03-NOV-26 15:01:15.975: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201305"  4.795 MB   18573 rows in 0 seconds using direct_path
+03-NOV-26 15:01:16.779: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201308"  4.526 MB   17521 rows in 0 seconds using direct_path
+03-NOV-26 15:01:16.892: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201307"  4.494 MB   17427 rows in 0 seconds using direct_path
+03-NOV-26 15:01:17.715: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201310"  4.494 MB   17410 rows in 0 seconds using direct_path
+03-NOV-26 15:01:17.804: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201305"  4.349 MB   18570 rows in 0 seconds using direct_path
+03-NOV-26 15:01:18.604: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201311"  4.223 MB   16335 rows in 0 seconds using direct_path
+03-NOV-26 15:01:18.710: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201306"  4.219 MB   16295 rows in 0 seconds using direct_path
+03-NOV-26 15:01:19.542: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201309"  4.180 MB   16214 rows in 0 seconds using direct_path
+03-NOV-26 15:01:19.646: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201402"  4.142 MB   15990 rows in 0 seconds using direct_path
+03-NOV-26 15:01:20.391: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201308"  4.102 MB   17521 rows in 0 seconds using direct_path
+03-NOV-26 15:01:20.507: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201403"  4.138 MB   15954 rows in 0 seconds using direct_path
+03-NOV-26 15:01:21.271: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201307"  4.073 MB   17426 rows in 0 seconds using direct_path
+03-NOV-26 15:01:21.359: W-1 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201310"  4.075 MB   17410 rows in 0 seconds using direct_path
+03-NOV-26 15:01:22.133: W-1 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201401"  4.039 MB   15655 rows in 0 seconds using direct_path
+03-NOV-26 15:04:20.759: W-2 . . exported "PAYMENT"."TB_CMSBANK_TRANS"                45.47 GB 112507031 rows in 444 seconds using direct_path
+03-NOV-26 15:04:21.538: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201309"  3.788 MB   16214 rows in 0 seconds using direct_path
+03-NOV-26 15:04:21.635: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201312"  3.891 MB   15018 rows in 0 seconds using direct_path
+03-NOV-26 15:04:22.403: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201311"  3.831 MB   16335 rows in 0 seconds using direct_path
+03-NOV-26 15:04:22.489: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201306"  3.820 MB   16295 rows in 0 seconds using direct_path
+03-NOV-26 15:04:23.243: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201402"  3.757 MB   15991 rows in 0 seconds using direct_path
+03-NOV-26 15:04:23.327: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201403"  3.754 MB   15954 rows in 0 seconds using direct_path
+03-NOV-26 15:04:24.073: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201407"  3.752 MB   14383 rows in 1 seconds using direct_path
+03-NOV-26 15:04:24.155: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201401"  3.666 MB   15654 rows in 0 seconds using direct_path
+03-NOV-26 15:04:24.917: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201510"  3.572 MB   13737 rows in 0 seconds using direct_path
+03-NOV-26 15:04:25.047: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201404"  3.576 MB   13747 rows in 1 seconds using direct_path
+03-NOV-26 15:04:25.812: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201408"  3.546 MB   13621 rows in 0 seconds using direct_path
+03-NOV-26 15:04:25.908: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201511"  3.504 MB   13250 rows in 0 seconds using direct_path
+03-NOV-26 15:04:26.006: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201405"  3.538 MB   13560 rows in 1 seconds using direct_path
+03-NOV-26 15:04:26.731: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201312"  3.529 MB   15018 rows in 0 seconds using direct_path
+03-NOV-26 15:04:26.814: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201407"  3.400 MB   14372 rows in 0 seconds using direct_path
+03-NOV-26 15:04:26.912: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201410"  3.465 MB   13276 rows in 0 seconds using direct_path
+03-NOV-26 15:04:27.705: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201406"  3.420 MB   13125 rows in 0 seconds using direct_path
+03-NOV-26 15:04:27.787: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201512"  3.272 MB   13106 rows in 0 seconds using direct_path
+03-NOV-26 15:04:27.888: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201409"  3.350 MB   12861 rows in 0 seconds using direct_path
+03-NOV-26 15:04:28.688: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201404"  3.245 MB   13742 rows in 0 seconds using direct_path
+03-NOV-26 15:04:28.780: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201509"  3.301 MB   12761 rows in 0 seconds using direct_path
+03-NOV-26 15:04:28.860: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201408"  3.213 MB   13610 rows in 0 seconds using direct_path
+03-NOV-26 15:04:29.584: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201405"  3.207 MB   13555 rows in 0 seconds using direct_path
+03-NOV-26 15:04:29.681: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201508"  3.239 MB   12508 rows in 0 seconds using direct_path
+03-NOV-26 15:04:29.769: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201410"  3.140 MB   13254 rows in 0 seconds using direct_path
+03-NOV-26 15:04:30.513: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201503"  3.238 MB   12459 rows in 0 seconds using direct_path
+03-NOV-26 15:04:30.591: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201406"  3.095 MB   13107 rows in 0 seconds using direct_path
+03-NOV-26 15:04:30.684: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201504"  3.069 MB   11696 rows in 0 seconds using direct_path
+03-NOV-26 15:04:31.444: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201501"  3.070 MB   11799 rows in 0 seconds using direct_path
+03-NOV-26 15:04:31.546: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201507"  3.044 MB   11748 rows in 0 seconds using direct_path
+03-NOV-26 15:04:31.633: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201409"  3.037 MB   12853 rows in 0 seconds using direct_path
+03-NOV-26 15:04:32.368: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201506"  3.048 MB   11760 rows in 0 seconds using direct_path
+03-NOV-26 15:04:32.449: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201510"  2.911 MB   12271 rows in 0 seconds using direct_path
+03-NOV-26 15:04:32.536: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201411"  3.022 MB   11547 rows in 0 seconds using direct_path
+03-NOV-26 15:04:33.263: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201503"  2.915 MB   12342 rows in 0 seconds using direct_path
+03-NOV-26 15:04:33.338: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201508"  2.812 MB   11859 rows in 0 seconds using direct_path
+03-NOV-26 15:04:33.415: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201509"  2.825 MB   11921 rows in 0 seconds using direct_path
+03-NOV-26 15:04:34.148: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201501"  2.759 MB   11687 rows in 0 seconds using direct_path
+03-NOV-26 15:04:34.240: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201505"  2.831 MB   10770 rows in 0 seconds using direct_path
+03-NOV-26 15:04:34.318: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201504"  2.744 MB   11533 rows in 0 seconds using direct_path
+03-NOV-26 15:04:35.073: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201502"  2.792 MB   10683 rows in 1 seconds using direct_path
+03-NOV-26 15:04:35.152: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201506"  2.736 MB   11565 rows in 0 seconds using direct_path
+03-NOV-26 15:04:35.244: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_201412"  2.767 MB   10610 rows in 0 seconds using direct_path
+03-NOV-26 15:04:35.972: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201411"  2.736 MB   11516 rows in 0 seconds using direct_path
+03-NOV-26 15:04:36.053: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201507"  2.675 MB   11304 rows in 1 seconds using direct_path
+03-NOV-26 15:04:36.131: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201511"  2.549 MB   10716 rows in 0 seconds using direct_path
+03-NOV-26 15:04:36.879: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201505"  2.525 MB   10609 rows in 0 seconds using direct_path
+03-NOV-26 15:04:36.969: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201502"  2.507 MB   10570 rows in 0 seconds using direct_path
+03-NOV-26 15:04:37.048: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_201412"  2.499 MB   10555 rows in 1 seconds using direct_path
+03-NOV-26 15:04:37.142: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201511"  1.239 MB    2634 rows in 0 seconds using direct_path
+03-NOV-26 15:04:37.251: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201510"  783.5 KB    1615 rows in 0 seconds using direct_path
+03-NOV-26 15:04:37.342: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201509"  514.3 KB    1019 rows in 0 seconds using direct_path
+03-NOV-26 15:04:37.431: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201508"  413.2 KB     790 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.209: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201507"  349.0 KB     615 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.299: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2012"  267.2 KB     394 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.388: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201506"  247.3 KB     378 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.476: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201505"  233.5 KB     343 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.564: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201504"  233.0 KB     342 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.644: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201503"  118.4 KB     129 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.732: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201501"  113.6 KB     117 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.814: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201502"  112.3 KB     115 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.897: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201412"  90.32 KB      66 rows in 0 seconds using direct_path
+03-NOV-26 15:04:38.979: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201307"  88.93 KB      59 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.062: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201411"  79.81 KB      45 rows in 1 seconds using direct_path
+03-NOV-26 15:04:39.146: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201302"  78.23 KB      38 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.237: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201301"     77 KB      36 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.325: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201309"  76.96 KB      36 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.421: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201310"     77 KB      36 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.509: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201407"  75.17 KB      34 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.593: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201303"  74.55 KB      31 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.676: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201305"  74.14 KB      31 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.760: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201410"  73.86 KB      33 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.851: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201408"  73.10 KB      30 rows in 0 seconds using direct_path
+03-NOV-26 15:04:39.943: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201403"  73.17 KB      29 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.038: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201308"  72.99 KB      28 rows in 1 seconds using direct_path
+03-NOV-26 15:04:40.134: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201402"  72.85 KB      29 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.237: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201405"  72.49 KB      29 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.322: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201401"  72.16 KB      28 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.413: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201312"  71.95 KB      27 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.515: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201304"  71.85 KB      27 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.614: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201406"  71.40 KB      29 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.713: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201306"  70.33 KB      24 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.804: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201311"  66.58 KB      17 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.889: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201404"  66.21 KB      17 rows in 0 seconds using direct_path
+03-NOV-26 15:04:40.970: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_201409"  65.41 KB      16 rows in 0 seconds using direct_path
+03-NOV-26 15:04:41.046: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2014"         45.96 KB      62 rows in 1 seconds using direct_path
+03-NOV-26 15:05:09.699: W-1 . . exported "THEBILL"."BPYPAYMENT"                      55.33 GB 124361341 rows in 227 seconds using direct_path
+03-NOV-26 15:14:36.525: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202310"      6.245 GB 26694031 rows in 595 seconds using direct_path
+03-NOV-26 15:24:51.863: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202311"      6.069 GB 25937974 rows in 615 seconds using direct_path
+03-NOV-26 15:35:00.888: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202312"      5.832 GB 24906996 rows in 609 seconds using direct_path
+03-NOV-26 15:37:34.994: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202401"      1.382 GB 5908746 rows in 154 seconds using direct_path
+03-NOV-26 15:38:00.280: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202402"      236.6 MB  990593 rows in 26 seconds using direct_path
+03-NOV-26 15:38:23.715: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202403"      204.0 MB  855835 rows in 23 seconds using direct_path
+03-NOV-26 15:38:44.396: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202404"      209.7 MB  878881 rows in 21 seconds using direct_path
+03-NOV-26 15:39:03.383: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202405"      227.9 MB  954965 rows in 19 seconds using direct_path
+03-NOV-26 15:39:27.613: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202406"      214.9 MB  900918 rows in 24 seconds using direct_path
+03-NOV-26 15:39:48.067: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202407"      231.1 MB  968525 rows in 21 seconds using direct_path
+03-NOV-26 15:40:10.023: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202408"      218.8 MB  916097 rows in 22 seconds using direct_path
+03-NOV-26 15:40:29.580: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202409"      230.4 MB  962842 rows in 19 seconds using direct_path
+03-NOV-26 15:40:47.837: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202410"      217.1 MB  910062 rows in 18 seconds using direct_path
+03-NOV-26 15:41:04.725: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202411"      209.5 MB  878586 rows in 17 seconds using direct_path
+03-NOV-26 15:41:23.165: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202412"      220.6 MB  925637 rows in 19 seconds using direct_path
+03-NOV-26 15:42:44.242: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202501"      954.4 MB 3986437 rows in 81 seconds using direct_path
+03-NOV-26 15:44:00.369: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202502"      903.2 MB 3774287 rows in 76 seconds using direct_path
+03-NOV-26 15:45:10.709: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202503"      860.9 MB 3599323 rows in 70 seconds using direct_path
+03-NOV-26 15:46:13.733: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202504"      767.4 MB 3208779 rows in 63 seconds using direct_path
+03-NOV-26 15:47:13.949: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202505"      712.6 MB 2979579 rows in 60 seconds using direct_path
+03-NOV-26 15:48:09.845: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202506"      665.5 MB 2783469 rows in 56 seconds using direct_path
+03-NOV-26 15:49:55.258: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202507"      1.317 GB 5640833 rows in 106 seconds using direct_path
+03-NOV-26 15:51:55.733: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202508"      1.531 GB 6555551 rows in 120 seconds using direct_path
+03-NOV-26 15:53:46.214: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202509"      1.410 GB 6039197 rows in 111 seconds using direct_path
+03-NOV-26 15:55:37.607: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202510"      1.422 GB 6087686 rows in 111 seconds using direct_path
+03-NOV-26 15:57:28.179: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202511"      1.411 GB 6043459 rows in 111 seconds using direct_path
+03-NOV-26 16:01:11.175: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202512"      2.967 GB 12701185 rows in 223 seconds using direct_path
+03-NOV-26 16:03:06.947: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202601"      1.527 GB 6542121 rows in 115 seconds using direct_path
+03-NOV-26 16:04:53.162: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202602"      1.390 GB 5954052 rows in 107 seconds using direct_path
+03-NOV-26 16:07:08.369: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202603"      1.782 GB 7627635 rows in 135 seconds using direct_path
+03-NOV-26 16:09:38.601: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202604"      1.949 GB 8342815 rows in 150 seconds using direct_path
+03-NOV-26 16:12:36.380: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202605"      2.254 GB 9645865 rows in 178 seconds using direct_path
+03-NOV-26 16:15:36.982: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202606"      2.309 GB 9881124 rows in 180 seconds using direct_path
+03-NOV-26 16:19:19.695: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202607"      2.795 GB 11959192 rows in 223 seconds using direct_path
+03-NOV-26 16:24:21.275: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202608"      3.743 GB 16007491 rows in 302 seconds using direct_path
+03-NOV-26 16:29:49.480: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202609"      4.011 GB 17178827 rows in 328 seconds using direct_path
+03-NOV-26 16:35:38.971: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202610"      4.394 GB 18782108 rows in 349 seconds using direct_path
+03-NOV-26 16:35:57.467: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202611"      286.9 MB 1254069 rows in 19 seconds using direct_path
+03-NOV-26 16:35:57.517: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_202612"      19.71 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:35:57.564: W-2 . . exported "NTS"."NTSCASHMAS":"NTSCASHMAS_9999"        19.71 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:39:47.292: W-2 . . exported "PAYMENT"."TB_TRANS_HISTORY":"TRANS_HISTORY_202610"  36.07 GB 123760127 rows in 230 seconds using direct_path
+03-NOV-26 16:40:12.037: W-2 . . exported "PAYMENT"."TB_TRANS_HISTORY":"TRANS_HISTORY_202611"  2.488 GB 8568533 rows in 25 seconds using direct_path
+03-NOV-26 16:40:12.102: W-2 . . exported "PAYMENT"."TB_TRANS_HISTORY":"TRANS_HISTORY_202612"  38.00 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:40:12.163: W-2 . . exported "PAYMENT"."TB_TRANS_HISTORY":"TRANS_HISTORY_999999"  38.00 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:41:01.338: W-2 . . exported "PAYMENT"."TB_TRANS_REQ_CC":"TRANS_REQ_CC_2023"  8.492 GB 66076457 rows in 49 seconds using direct_path
+03-NOV-26 16:41:51.881: W-2 . . exported "PAYMENT"."TB_TRANS_REQ_CC":"TRANS_REQ_CC_2024"  10.68 GB 83500065 rows in 50 seconds using direct_path
+03-NOV-26 16:43:09.508: W-2 . . exported "PAYMENT"."TB_TRANS_REQ_CC":"TRANS_REQ_CC_2025"  16.75 GB 131219343 rows in 78 seconds using direct_path
+03-NOV-26 16:44:54.901: W-2 . . exported "PAYMENT"."TB_TRANS_REQ_CC":"TRANS_REQ_CC_2026"  19.25 GB 150496473 rows in 105 seconds using direct_path
+03-NOV-26 16:44:54.945: W-2 . . exported "PAYMENT"."TB_TRANS_REQ_CC":"TRANS_REQ_CC_9999"  12.34 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:46:46.668: W-2 . . exported "PAYMENT"."TB_UI_GSLB_TID_VERIFY"           26.05 GB 270215221 rows in 112 seconds using direct_path
+03-NOV-26 16:49:06.193: W-2 . . exported "PAYMENT"."TB_UT_API_HISTORY"               32.81 GB 49725051 rows in 140 seconds using direct_path
+03-NOV-26 16:52:45.957: W-2 . . exported "PAYMENT"."TB_UT_PAY_HISTORY"               54.81 GB 69663719 rows in 219 seconds using direct_path
+03-NOV-26 16:54:06.515: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2021"         3.881 GB 17684447 rows in 81 seconds using direct_path
+03-NOV-26 16:54:29.468: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2022"         2.135 GB 9943003 rows in 23 seconds using direct_path
+03-NOV-26 16:54:36.010: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2023"         714.9 MB 3659978 rows in 7 seconds using direct_path
+03-NOV-26 16:54:39.894: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2024"         420.4 MB 2318726 rows in 3 seconds using direct_path
+03-NOV-26 16:54:41.127: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2025"         118.1 MB  893694 rows in 2 seconds using direct_path
+03-NOV-26 16:54:41.768: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_2026"         55.28 MB  579666 rows in 0 seconds using direct_path
+03-NOV-26 16:54:41.822: W-2 . . exported "PAYMENT2"."SCREDIT":"SCREDIT_999999"       47.25 KB      64 rows in 0 seconds using direct_path
+03-NOV-26 16:55:50.111: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2021"  5.868 GB 13361645 rows in 69 seconds using direct_path
+03-NOV-26 16:56:34.340: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2022"  3.441 GB 7805035 rows in 44 seconds using direct_path
+03-NOV-26 16:56:47.226: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2023"  1.123 GB 2462667 rows in 13 seconds using direct_path
+03-NOV-26 16:56:52.981: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2024"  624.7 MB 1340778 rows in 5 seconds using direct_path
+03-NOV-26 16:56:54.006: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2025"  101.2 MB  208836 rows in 2 seconds using direct_path
+03-NOV-26 16:56:54.113: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_2026"  1.648 MB    3067 rows in 0 seconds using direct_path
+03-NOV-26 16:56:54.194: W-2 . . exported "PAYMENT2"."TB_CARD_TRANS":"CARD_TRANS_999999"  57.36 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:57:10.337: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2021"  3.357 GB 13552512 rows in 16 seconds using direct_path
+03-NOV-26 16:57:18.634: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2022"  2.036 GB 7913935 rows in 8 seconds using direct_path
+03-NOV-26 16:57:23.473: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2023"  695.2 MB 2538405 rows in 5 seconds using direct_path
+03-NOV-26 16:57:25.117: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2024"  385.5 MB 1398829 rows in 2 seconds using direct_path
+03-NOV-26 16:57:25.473: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2025"  61.12 MB  223132 rows in 0 seconds using direct_path
+03-NOV-26 16:57:25.554: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_2026"  1.130 MB    4118 rows in 0 seconds using direct_path
+03-NOV-26 16:57:25.617: W-2 . . exported "PAYMENT2"."TB_TRANS_HISTORY":"TRANS_HISTORY_999999"  36.66 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:57:57.075: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2021"  3.328 GB 13462029 rows in 32 seconds using direct_path
+03-NOV-26 16:58:15.849: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2022"  1.994 GB 7827121 rows in 18 seconds using direct_path
+03-NOV-26 16:58:23.647: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2023"  690.4 MB 2478605 rows in 8 seconds using direct_path
+03-NOV-26 16:58:30.444: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2024"  376.5 MB 1356126 rows in 7 seconds using direct_path
+03-NOV-26 16:58:31.069: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2025"  57.68 MB  197726 rows in 1 seconds using direct_path
+03-NOV-26 16:58:31.147: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_2026"  1.268 MB    3971 rows in 0 seconds using direct_path
+03-NOV-26 16:58:31.204: W-2 . . exported "PAYMENT2"."TB_TRANS_REQ":"TRANS_REQ_999999"  34.75 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 16:58:32.518: ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+03-NOV-26 16:58:32.830: W-1      Completed 380 TABLE_EXPORT/TABLE/TABLE_DATA objects in 8760 seconds
+03-NOV-26 16:58:33.861: W-1 Master table "SYSTEM"."DBC_EXP_20261103065622_06" successfully loaded/unloaded
+03-NOV-26 16:58:34.545: ******************************************************************************
+03-NOV-26 16:58:34.546: Dump file set for SYSTEM.DBC_EXP_20261103065622_06 is:
+03-NOV-26 16:58:34.549:   /mig/DBA_PUMP/exp_table_dataonly_20261103_06_01.dmp
+03-NOV-26 16:58:34.550:   /mig/DBA_PUMP/exp_table_dataonly_20261103_06_02.dmp
+03-NOV-26 16:58:34.900: Job "SYSTEM"."DBC_EXP_20261103065622_06" successfully completed at Tue Nov 3 16:58:34 2026 elapsed 0 02:26:11

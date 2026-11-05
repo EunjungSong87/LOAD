@@ -1,0 +1,158 @@
+;;; 
+Export: Release 19.0.0.0.0 - Production on Tue Nov 3 07:32:22 2026
+Version 19.16.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+03-NOV-26 07:32:25.774: ;;; **************************************************************************
+03-NOV-26 07:32:25.781: ;;; Parfile values:
+03-NOV-26 07:32:25.790: ;;;  parfile:  job_name=DBC_EXP_20261103065622_01
+03-NOV-26 07:32:25.798: ;;;  parfile:  flashback_scn=14275270401578
+03-NOV-26 07:32:25.805: ;;;  parfile:  logtime=ALL
+03-NOV-26 07:32:25.811: ;;;  parfile:  metrics=Y
+03-NOV-26 07:32:25.817: ;;;  parfile:  filesize=538G
+03-NOV-26 07:32:25.845: ;;;  parfile:  parallel=2
+03-NOV-26 07:32:25.864: ;;;  parfile:  exclude=STATISTICS
+03-NOV-26 07:32:25.881: ;;;  parfile:  content=DATA_ONLY
+03-NOV-26 07:32:25.890: ;;;  parfile:  tables=PAYMENT.TB_CARD_TRANS:CARD_TRANS_202310,
+03-NOV-26 07:32:25.899: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202311,
+03-NOV-26 07:32:25.910: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202312,
+03-NOV-26 07:32:25.919: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202401,
+03-NOV-26 07:32:25.934: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202402,
+03-NOV-26 07:32:25.957: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202403,
+03-NOV-26 07:32:25.965: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202404,
+03-NOV-26 07:32:25.972: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202405,
+03-NOV-26 07:32:25.978: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202406,
+03-NOV-26 07:32:25.984: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202407,
+03-NOV-26 07:32:25.990: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202408,
+03-NOV-26 07:32:25.999: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202409,
+03-NOV-26 07:32:26.022: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202410,
+03-NOV-26 07:32:26.032: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202411,
+03-NOV-26 07:32:26.053: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202412,
+03-NOV-26 07:32:26.067: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202501,
+03-NOV-26 07:32:26.076: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202502,
+03-NOV-26 07:32:26.085: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202503,
+03-NOV-26 07:32:26.096: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202504,
+03-NOV-26 07:32:26.103: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202505,
+03-NOV-26 07:32:26.113: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202506,
+03-NOV-26 07:32:26.120: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202507,
+03-NOV-26 07:32:26.133: ;;;  _parfile: PAYMENT.TB_CARD_TRANS:CARD_TRANS_202508,
+03-NOV-26 07:32:26.144: ;;;  _parfile: PAYMENT.TB_STRIPE_URL_NOTI,AEGISPG.PHONE_BILL,
+03-NOV-26 07:32:26.159: ;;;  _parfile: AEGISPG.ACCOUNT_MODIFY_LIST,
+03-NOV-26 07:32:26.170: ;;;  _parfile: AEGISPG.KOCES_EDI_SEND:KOCES_EDI_SEND_9999,AEGISPG.MAILQUEUEB,
+03-NOV-26 07:32:26.186: ;;;  _parfile: AEGISPG.TB_CALC_SLIP:TB_CALC_SLIP_2023,
+03-NOV-26 07:32:26.196: ;;;  _parfile: AEGISPG.TB_CALC_SLIP:TB_CALC_SLIP_2024,
+03-NOV-26 07:32:26.205: ;;;  _parfile: AEGISPG.TB_CALC_SLIP:TB_CALC_SLIP_2025,
+03-NOV-26 07:32:26.214: ;;;  _parfile: AEGISPG.TB_CALC_SLIP:TB_CALC_SLIP_2026,
+03-NOV-26 07:32:26.221: ;;;  _parfile: AEGISPG.TB_CALC_SLIP:TB_CALC_SLIP_9999,AEGISPG.TOAD_PLAN_TABLE,
+03-NOV-26 07:32:26.228: ;;;  _parfile: CMSDESK.TOAD_PLAN_TABLE,G_SD.TOAD_PLAN_TABLE,MIGPG.CHKPT,
+03-NOV-26 07:32:26.237: ;;;  _parfile: MIGPG.CHKPT_LOX,MIGPG.SYS_IMPORT_TABLE_02,
+03-NOV-26 07:32:26.246: ;;;  _parfile: MIGPG.SYS_IMPORT_TABLE_03,
+03-NOV-26 07:32:26.255: ;;;  _parfile: NTS.TRANS_DATA_APP:TRANS_DATA_APP_2023,
+03-NOV-26 07:32:26.264: ;;;  _parfile: NTS.TRANS_DATA_APP:TRANS_DATA_APP_2024,
+03-NOV-26 07:32:26.271: ;;;  _parfile: NTS.TRANS_DATA_APP:TRANS_DATA_APP_2025,
+03-NOV-26 07:32:26.277: ;;;  _parfile: NTS.TRANS_DATA_APP:TRANS_DATA_APP_2026,
+03-NOV-26 07:32:26.283: ;;;  _parfile: NTS.TRANS_DATA_APP:TRANS_DATA_APP_9999,
+03-NOV-26 07:32:26.289: ;;;  _parfile: PAYMENT.CREATE$JAVA$LOB$TABLE,PAYMENT2.CREATE$JAVA$LOB$TABLE,
+03-NOV-26 07:32:26.296: ;;;  _parfile: S_XAS.ACCOUNT_DEVICE_INFO,S_XAS.ACCOUNT_INFO_TMP,
+03-NOV-26 07:32:26.303: ;;;  _parfile: S_XAS.APP_HASH_LOG,S_XAS.APP_INTEGRITY_MNG_TMP,
+03-NOV-26 07:32:26.311: ;;;  _parfile: S_XAS.APP_REG_MNG_TMP,S_XAS.APPROVAL,S_XAS.DEVICE_MNG,
+03-NOV-26 07:32:26.320: ;;;  _parfile: S_XAS.DEX_PROCONF_INFO,S_XAS.DEX_PROTECT,
+03-NOV-26 07:32:26.330: ;;;  _parfile: S_XAS.EXT_INTEGRITY_MNG_TMP,S_XAS.INTEGRITY_POLICY_TMP,
+03-NOV-26 07:32:26.338: ;;;  _parfile: S_XAS.KEYSTORE_INFO,S_XAS.MANUF_REG_MNG,S_XAS.SIMULATOR_PATTERN,
+03-NOV-26 07:32:26.346: ;;;  _parfile: S_XAS.STATS_APP,S_XAS.STATS_APP_INTEGRITY_HASH,S_XAS.STATS_BASE,
+03-NOV-26 07:32:26.357: ;;;  _parfile: S_XAS.STATS_BATCH,S_XAS.STATS_BATCH_POLICY,S_XAS.STATS_MANUF,
+03-NOV-26 07:32:26.365: ;;;  _parfile: S_XAS.STATS_OS,SNSPAY.TB_SNS_MENU,SNSPAY.TB_SNS_MENU_MAP,
+03-NOV-26 07:32:26.373: ;;;  _parfile: SNSPAY.TB_SNS_QR_MGMT,SNSPAY.TB_SNS_QRTZ_PAUSED_TRIGGER_GRPS,
+03-NOV-26 07:32:26.379: ;;;  _parfile: SNSPAY.TB_SNS_ROLE
+03-NOV-26 07:32:26.386: ;;;  parfile:  logfile=exp_table_dataonly_20261103_01.log
+03-NOV-26 07:32:26.392: ;;;  parfile:  dumpfile=exp_table_dataonly_20261103_01_%U.dmp
+03-NOV-26 07:32:26.398: ;;;  parfile:  directory=DBA_PUMP
+03-NOV-26 07:32:26.404: ;;; **************************************************************************
+03-NOV-26 07:32:26.771: Starting "SYSTEM"."DBC_EXP_20261103065622_01":  system/******** parfile=dbc_exp_20261103065622_01.par 
+03-NOV-26 07:32:27.362: W-1 Startup took 1 seconds
+03-NOV-26 07:32:29.778: W-2 Startup took 0 seconds
+03-NOV-26 07:32:31.861: W-1 Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+03-NOV-26 07:32:33.073: W-1 . . exported "AEGISPG"."ACCOUNT_MODIFY_LIST"             1.979 MB   13150 rows in 1 seconds using direct_path
+03-NOV-26 07:32:33.136: W-1 . . exported "AEGISPG"."KOCES_EDI_SEND":"KOCES_EDI_SEND_9999"  16.23 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.184: W-1 . . exported "AEGISPG"."MAILQUEUEB"                      9.781 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.249: W-1 . . exported "AEGISPG"."TB_CALC_SLIP":"TB_CALC_SLIP_2023"  15.82 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.303: W-1 . . exported "AEGISPG"."TB_CALC_SLIP":"TB_CALC_SLIP_2024"  15.82 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.358: W-1 . . exported "AEGISPG"."TB_CALC_SLIP":"TB_CALC_SLIP_2025"  15.82 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.405: W-1 . . exported "AEGISPG"."TB_CALC_SLIP":"TB_CALC_SLIP_2026"  15.82 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.458: W-1 . . exported "AEGISPG"."TB_CALC_SLIP":"TB_CALC_SLIP_9999"  15.82 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.527: W-1 . . exported "AEGISPG"."TOAD_PLAN_TABLE"                 14.89 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.590: W-1 . . exported "CMSDESK"."TOAD_PLAN_TABLE"                 19.40 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.649: W-1 . . exported "G_SD"."TOAD_PLAN_TABLE"                    20.30 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.691: W-1 . . exported "MIGPG"."CHKPT"                             10.35 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.734: W-1 . . exported "MIGPG"."CHKPT_LOX"                         6.867 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.809: W-1 . . exported "MIGPG"."SYS_IMPORT_TABLE_02"               46.05 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.885: W-1 . . exported "MIGPG"."SYS_IMPORT_TABLE_03"               46.05 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.939: W-1 . . exported "NTS"."TRANS_DATA_APP":"TRANS_DATA_APP_2023"  7.601 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:33.982: W-1 . . exported "NTS"."TRANS_DATA_APP":"TRANS_DATA_APP_2024"  7.601 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:34.020: W-1 . . exported "NTS"."TRANS_DATA_APP":"TRANS_DATA_APP_2025"  7.601 KB       0 rows in 1 seconds using direct_path
+03-NOV-26 07:32:34.058: W-1 . . exported "NTS"."TRANS_DATA_APP":"TRANS_DATA_APP_2026"  7.601 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:34.103: W-1 . . exported "NTS"."TRANS_DATA_APP":"TRANS_DATA_APP_9999"  7.601 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:34.145: W-1 . . exported "PAYMENT"."CREATE$JAVA$LOB$TABLE"           5.906 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 07:32:35.107: W-2 . . exported "AEGISPG"."PHONE_BILL"                      216.1 MB 1160078 rows in 3 seconds using direct_path
+03-NOV-26 07:38:09.482: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202310"  34.66 GB 69536348 rows in 335 seconds using direct_path
+03-NOV-26 07:43:45.641: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202311"  34.64 GB 69139800 rows in 336 seconds using direct_path
+03-NOV-26 07:50:34.334: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202312"  41.94 GB 83945668 rows in 409 seconds using direct_path
+03-NOV-26 07:55:37.410: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202401"  31.01 GB 61439021 rows in 303 seconds using direct_path
+03-NOV-26 08:00:10.626: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202402"  27.98 GB 55457163 rows in 273 seconds using direct_path
+03-NOV-26 08:05:20.972: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202403"  31.25 GB 61601816 rows in 310 seconds using direct_path
+03-NOV-26 08:10:39.111: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202404"  31.79 GB 62615953 rows in 319 seconds using direct_path
+03-NOV-26 08:16:18.672: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202405"  33.73 GB 66373431 rows in 339 seconds using direct_path
+03-NOV-26 08:22:05.900: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202406"  34.40 GB 67537914 rows in 347 seconds using direct_path
+03-NOV-26 08:27:55.059: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202407"  35.41 GB 69570009 rows in 350 seconds using direct_path
+03-NOV-26 08:33:41.059: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202408"  35.60 GB 69941781 rows in 346 seconds using direct_path
+03-NOV-26 08:39:22.732: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202409"  34.60 GB 67848285 rows in 341 seconds using direct_path
+03-NOV-26 08:45:11.899: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202410"  36.72 GB 72000782 rows in 349 seconds using direct_path
+03-NOV-26 08:51:13.662: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202411"  37.68 GB 73753699 rows in 362 seconds using direct_path
+03-NOV-26 08:57:35.084: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202412"  39.78 GB 77874429 rows in 382 seconds using direct_path
+03-NOV-26 09:03:41.386: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202501"  37.99 GB 74435692 rows in 366 seconds using direct_path
+03-NOV-26 09:09:30.414: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202502"  36.67 GB 71898564 rows in 349 seconds using direct_path
+03-NOV-26 09:16:10.012: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202503"  42.10 GB 82371111 rows in 400 seconds using direct_path
+03-NOV-26 09:22:46.187: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202504"  41.55 GB 81712573 rows in 396 seconds using direct_path
+03-NOV-26 09:29:36.676: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202505"  43.72 GB 86197639 rows in 410 seconds using direct_path
+03-NOV-26 09:36:36.681: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202506"  44.57 GB 87869961 rows in 420 seconds using direct_path
+03-NOV-26 09:44:09.049: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202507"  48.14 GB 95089131 rows in 453 seconds using direct_path
+03-NOV-26 09:51:34.426: W-1 . . exported "PAYMENT"."TB_CARD_TRANS":"CARD_TRANS_202508"  47.38 GB 93757952 rows in 445 seconds using direct_path
+03-NOV-26 09:53:19.626: W-1 . . exported "PAYMENT"."TB_STRIPE_URL_NOTI"              12.73 GB 7106779 rows in 105 seconds using direct_path
+03-NOV-26 09:53:19.681: W-1 . . exported "PAYMENT2"."CREATE$JAVA$LOB$TABLE"          5.906 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.728: W-1 . . exported "SNSPAY"."TB_SNS_MENU"                        8.5 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.766: W-1 . . exported "SNSPAY"."TB_SNS_MENU_MAP"                  7.187 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.800: W-1 . . exported "SNSPAY"."TB_SNS_QRTZ_PAUSED_TRIGGER_GRPS"  5.515 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.856: W-1 . . exported "SNSPAY"."TB_SNS_QR_MGMT"                    9.75 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.878: W-1 . . exported "SNSPAY"."TB_SNS_ROLE"                      5.906 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.927: W-1 . . exported "S_XAS"."ACCOUNT_DEVICE_INFO"               7.609 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:19.973: W-1 . . exported "S_XAS"."ACCOUNT_INFO_TMP"                  9.734 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.032: W-1 . . exported "S_XAS"."APPROVAL"                           11.5 KB       0 rows in 1 seconds using direct_path
+03-NOV-26 09:53:20.082: W-1 . . exported "S_XAS"."APP_HASH_LOG"                      11.46 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.131: W-1 . . exported "S_XAS"."APP_INTEGRITY_MNG_TMP"             12.32 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.171: W-1 . . exported "S_XAS"."APP_REG_MNG_TMP"                   10.60 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.217: W-1 . . exported "S_XAS"."DEVICE_MNG"                        8.031 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.258: W-1 . . exported "S_XAS"."DEX_PROCONF_INFO"                  6.757 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.297: W-1 . . exported "S_XAS"."DEX_PROTECT"                       8.875 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.340: W-1 . . exported "S_XAS"."EXT_INTEGRITY_MNG_TMP"             8.875 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.386: W-1 . . exported "S_XAS"."INTEGRITY_POLICY_TMP"              12.76 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.427: W-1 . . exported "S_XAS"."KEYSTORE_INFO"                     8.039 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.464: W-1 . . exported "S_XAS"."MANUF_REG_MNG"                     5.906 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.501: W-1 . . exported "S_XAS"."SIMULATOR_PATTERN"                 7.187 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.539: W-1 . . exported "S_XAS"."STATS_APP"                         7.648 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.578: W-1 . . exported "S_XAS"."STATS_APP_INTEGRITY_HASH"          10.17 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.618: W-1 . . exported "S_XAS"."STATS_BASE"                        9.351 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.658: W-1 . . exported "S_XAS"."STATS_BATCH"                       8.898 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.697: W-1 . . exported "S_XAS"."STATS_BATCH_POLICY"                7.625 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.733: W-1 . . exported "S_XAS"."STATS_MANUF"                       7.656 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:20.768: W-1 . . exported "S_XAS"."STATS_OS"                          7.640 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:53:22.079: ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+03-NOV-26 09:53:22.372: W-2      Completed 73 TABLE_EXPORT/TABLE/TABLE_DATA objects in 8448 seconds
+03-NOV-26 09:53:23.198: W-2 Master table "SYSTEM"."DBC_EXP_20261103065622_01" successfully loaded/unloaded
+03-NOV-26 09:53:23.826: ******************************************************************************
+03-NOV-26 09:53:23.827: Dump file set for SYSTEM.DBC_EXP_20261103065622_01 is:
+03-NOV-26 09:53:23.831:   /mig/DBA_PUMP/exp_table_dataonly_20261103_01_01.dmp
+03-NOV-26 09:53:23.831:   /mig/DBA_PUMP/exp_table_dataonly_20261103_01_02.dmp
+03-NOV-26 09:53:23.832:   /mig/DBA_PUMP/exp_table_dataonly_20261103_01_03.dmp
+03-NOV-26 09:53:24.126: Job "SYSTEM"."DBC_EXP_20261103065622_01" successfully completed at Tue Nov 3 09:53:24 2026 elapsed 0 02:21:00

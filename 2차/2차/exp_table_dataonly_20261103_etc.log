@@ -1,0 +1,37 @@
+;;; 
+Export: Release 19.0.0.0.0 - Production on Wed Nov 4 17:39:01 2026
+Version 19.16.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+04-NOV-26 17:39:03.406: ;;; **************************************************************************
+04-NOV-26 17:39:03.413: ;;; Parfile values:
+04-NOV-26 17:39:03.421: ;;;  parfile:  cluster=N
+04-NOV-26 17:39:03.427: ;;;  parfile:  job_name=exp_table_dataonly_20261103_etc
+04-NOV-26 17:39:03.433: ;;;  parfile:  flashback_scn=14275270401578
+04-NOV-26 17:39:03.439: ;;;  parfile:  logtime=ALL
+04-NOV-26 17:39:03.446: ;;;  parfile:  metrics=Y
+04-NOV-26 17:39:03.453: ;;;  parfile:  parallel=2
+04-NOV-26 17:39:03.460: ;;;  parfile:  exclude=STATISTICS
+04-NOV-26 17:39:03.466: ;;;  parfile:  content=DATA_ONLY
+04-NOV-26 17:39:03.471: ;;;  parfile:  tables=PAYMENT.TB_TRANS_REQ:TRANS_REQ_202607,
+04-NOV-26 17:39:03.477: ;;;  _parfile: PAYMENT.TB_TRANS_HISTORY:TRANS_HISTORY_202509
+04-NOV-26 17:39:03.491: ;;;  parfile:  logfile=exp_table_dataonly_20261103_etc.log
+04-NOV-26 17:39:03.503: ;;;  parfile:  dumpfile=exp_table_dataonly_20261103_etc_%U.dmp
+04-NOV-26 17:39:03.511: ;;;  parfile:  directory=DBA_PUMP
+04-NOV-26 17:39:03.521: ;;; **************************************************************************
+04-NOV-26 17:39:03.908: Starting "SYSTEM"."EXP_TABLE_DATAONLY_20261103_ETC":  system/******** parfile=dbc_exp_20261103065622_etc.par 
+04-NOV-26 17:39:04.599: W-1 Startup took 1 seconds
+04-NOV-26 17:39:07.165: W-2 Startup took 0 seconds
+04-NOV-26 17:39:07.679: W-1 Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+04-NOV-26 21:23:41.365: W-1 . . exported "PAYMENT"."TB_TRANS_HISTORY":"TRANS_HISTORY_202509"  28.70 GB 97785794 rows in 13473 seconds using direct_path
+04-NOV-26 21:53:22.207: W-1 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202607"  40.63 GB 128458986 rows in 1781 seconds using direct_path
+04-NOV-26 21:53:23.620: ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+04-NOV-26 21:53:23.963: W-2      Completed 2 TABLE_EXPORT/TABLE/TABLE_DATA objects in 15254 seconds
+04-NOV-26 21:53:24.846: W-2 Master table "SYSTEM"."EXP_TABLE_DATAONLY_20261103_ETC" successfully loaded/unloaded
+04-NOV-26 21:53:25.603: ******************************************************************************
+04-NOV-26 21:53:25.604: Dump file set for SYSTEM.EXP_TABLE_DATAONLY_20261103_ETC is:
+04-NOV-26 21:53:25.608:   /mig/DBA_PUMP/exp_table_dataonly_20261103_etc_01.dmp
+04-NOV-26 21:53:25.608:   /mig/DBA_PUMP/exp_table_dataonly_20261103_etc_02.dmp
+04-NOV-26 21:53:25.941: Job "SYSTEM"."EXP_TABLE_DATAONLY_20261103_ETC" successfully completed at Wed Nov 4 21:53:25 2026 elapsed 0 04:14:23

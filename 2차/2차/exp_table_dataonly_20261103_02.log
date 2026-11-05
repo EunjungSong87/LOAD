@@ -1,0 +1,107 @@
+;;; 
+Export: Release 19.0.0.0.0 - Production on Tue Nov 3 07:33:49 2026
+Version 19.16.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+03-NOV-26 07:33:51.682: ;;; **************************************************************************
+03-NOV-26 07:33:51.690: ;;; Parfile values:
+03-NOV-26 07:33:51.697: ;;;  parfile:  job_name=DBC_EXP_20261103065622_02
+03-NOV-26 07:33:51.706: ;;;  parfile:  flashback_scn=14275270401578
+03-NOV-26 07:33:51.714: ;;;  parfile:  logtime=ALL
+03-NOV-26 07:33:51.722: ;;;  parfile:  metrics=Y
+03-NOV-26 07:33:51.731: ;;;  parfile:  filesize=538G
+03-NOV-26 07:33:51.739: ;;;  parfile:  parallel=2
+03-NOV-26 07:33:51.751: ;;;  parfile:  exclude=STATISTICS
+03-NOV-26 07:33:51.763: ;;;  parfile:  content=DATA_ONLY
+03-NOV-26 07:33:51.791: ;;;  parfile:  tables=PAYMENT.TB_TRANS_REQ:TRANS_REQ_202310,
+03-NOV-26 07:33:51.803: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202311,
+03-NOV-26 07:33:51.810: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202312,
+03-NOV-26 07:33:51.824: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202401,
+03-NOV-26 07:33:51.832: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202402,
+03-NOV-26 07:33:51.840: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202403,
+03-NOV-26 07:33:51.850: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202404,
+03-NOV-26 07:33:51.859: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202405,
+03-NOV-26 07:33:51.866: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202406,
+03-NOV-26 07:33:51.875: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202407,
+03-NOV-26 07:33:51.883: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202408,
+03-NOV-26 07:33:51.892: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202409,
+03-NOV-26 07:33:51.903: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202410,
+03-NOV-26 07:33:51.912: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202411,
+03-NOV-26 07:33:51.919: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202412,
+03-NOV-26 07:33:51.927: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202501,
+03-NOV-26 07:33:51.934: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202502,
+03-NOV-26 07:33:51.941: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202503,
+03-NOV-26 07:33:51.952: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202504,
+03-NOV-26 07:33:51.961: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202505,
+03-NOV-26 07:33:51.969: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202506,
+03-NOV-26 07:33:51.978: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202507,
+03-NOV-26 07:33:51.986: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202508,
+03-NOV-26 07:33:51.996: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202509,
+03-NOV-26 07:33:52.011: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202510,
+03-NOV-26 07:33:52.024: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202511,
+03-NOV-26 07:33:52.051: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202512,
+03-NOV-26 07:33:52.066: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202601,
+03-NOV-26 07:33:52.080: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202602,
+03-NOV-26 07:33:52.089: ;;;  _parfile: PAYMENT.TB_TRANS_REQ:TRANS_REQ_202603,
+03-NOV-26 07:33:52.102: ;;;  _parfile: PAYMENT.TB_VACCT_TRANS:VACCT_TRANS_2023,
+03-NOV-26 07:33:52.110: ;;;  _parfile: PAYMENT.TB_VACCT_TRANS:VACCT_TRANS_2024,
+03-NOV-26 07:33:52.120: ;;;  _parfile: PAYMENT.TB_VACCT_TRANS:VACCT_TRANS_2025,
+03-NOV-26 07:33:52.127: ;;;  _parfile: PAYMENT.TB_VACCT_TRANS:VACCT_TRANS_2026,
+03-NOV-26 07:33:52.135: ;;;  _parfile: PAYMENT.TB_VACCT_TRANS:VACCT_TRANS_9999,
+03-NOV-26 07:33:52.146: ;;;  _parfile: PAYMENT.TB_BATCH_MON_INFO,AEGISPG.CARD_PREPAY_LIST_TMP
+03-NOV-26 07:33:52.155: ;;;  parfile:  logfile=exp_table_dataonly_20261103_02.log
+03-NOV-26 07:33:52.165: ;;;  parfile:  dumpfile=exp_table_dataonly_20261103_02_%U.dmp
+03-NOV-26 07:33:52.177: ;;;  parfile:  directory=DBA_PUMP
+03-NOV-26 07:33:52.184: ;;; **************************************************************************
+03-NOV-26 07:33:52.548: Starting "SYSTEM"."DBC_EXP_20261103065622_02":  system/******** parfile=dbc_exp_20261103065622_02.par 
+03-NOV-26 07:33:53.122: W-1 Startup took 0 seconds
+03-NOV-26 07:33:55.342: W-2 Startup took 0 seconds
+03-NOV-26 07:33:55.796: W-1 Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+03-NOV-26 07:33:57.586: W-1 . . exported "PAYMENT"."TB_BATCH_MON_INFO"               135.8 MB 3284971 rows in 1 seconds using direct_path
+03-NOV-26 07:33:57.611: W-2 . . exported "AEGISPG"."CARD_PREPAY_LIST_TMP"            3.081 MB   49491 rows in 0 seconds using direct_path
+03-NOV-26 07:39:02.090: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202310"  31.27 GB 105227349 rows in 305 seconds using direct_path
+03-NOV-26 07:44:00.398: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202311"  31.92 GB 104000107 rows in 298 seconds using direct_path
+03-NOV-26 07:49:22.340: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202312"  35.52 GB 116534824 rows in 322 seconds using direct_path
+03-NOV-26 07:52:52.476: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202401"  23.28 GB 73527501 rows in 210 seconds using direct_path
+03-NOV-26 07:55:49.907: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202402"  19.52 GB 61579367 rows in 177 seconds using direct_path
+03-NOV-26 07:59:04.278: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202403"  21.64 GB 67588244 rows in 195 seconds using direct_path
+03-NOV-26 08:02:22.174: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202404"  21.96 GB 68614618 rows in 198 seconds using direct_path
+03-NOV-26 08:05:52.817: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202405"  23.16 GB 72215808 rows in 210 seconds using direct_path
+03-NOV-26 08:09:25.055: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202406"  23.49 GB 72790705 rows in 213 seconds using direct_path
+03-NOV-26 08:13:07.298: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202407"  24.35 GB 75430451 rows in 222 seconds using direct_path
+03-NOV-26 08:16:53.146: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202408"  24.43 GB 75463436 rows in 226 seconds using direct_path
+03-NOV-26 08:20:32.417: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202409"  23.89 GB 73689288 rows in 219 seconds using direct_path
+03-NOV-26 08:24:21.867: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202410"  25.18 GB 77727050 rows in 229 seconds using direct_path
+03-NOV-26 08:28:15.843: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202411"  25.89 GB 79623089 rows in 234 seconds using direct_path
+03-NOV-26 08:32:20.785: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202412"  27.22 GB 83423368 rows in 245 seconds using direct_path
+03-NOV-26 08:36:29.567: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202501"  27.49 GB 84809327 rows in 249 seconds using direct_path
+03-NOV-26 08:40:31.629: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202502"  26.49 GB 81723551 rows in 242 seconds using direct_path
+03-NOV-26 08:45:09.844: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202503"  30.39 GB 93560821 rows in 278 seconds using direct_path
+03-NOV-26 08:49:44.823: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202504"  29.97 GB 92928145 rows in 275 seconds using direct_path
+03-NOV-26 08:54:32.325: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202505"  31.19 GB 96855500 rows in 288 seconds using direct_path
+03-NOV-26 08:59:17.885: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202506"  31.61 GB 97967052 rows in 285 seconds using direct_path
+03-NOV-26 09:04:29.900: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202507"  34.07 GB 105994963 rows in 312 seconds using direct_path
+03-NOV-26 09:09:35.152: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202508"  33.34 GB 103744559 rows in 306 seconds using direct_path
+03-NOV-26 09:14:40.294: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202509"  33.44 GB 104483044 rows in 305 seconds using direct_path
+03-NOV-26 09:19:29.785: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202510"  31.80 GB 99910325 rows in 289 seconds using direct_path
+03-NOV-26 09:24:37.392: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202511"  33.89 GB 105770482 rows in 308 seconds using direct_path
+03-NOV-26 09:30:08.545: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202512"  36.16 GB 114437791 rows in 331 seconds using direct_path
+03-NOV-26 09:35:11.100: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202601"  33.38 GB 104868734 rows in 303 seconds using direct_path
+03-NOV-26 09:39:43.444: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202602"  29.88 GB 93855846 rows in 272 seconds using direct_path
+03-NOV-26 09:45:06.298: W-2 . . exported "PAYMENT"."TB_TRANS_REQ":"TRANS_REQ_202603"  35.77 GB 112094638 rows in 323 seconds using direct_path
+03-NOV-26 09:47:06.427: W-2 . . exported "PAYMENT"."TB_VACCT_TRANS":"VACCT_TRANS_2023"  8.571 GB 19531901 rows in 120 seconds using direct_path
+03-NOV-26 09:49:04.946: W-2 . . exported "PAYMENT"."TB_VACCT_TRANS":"VACCT_TRANS_2024"  7.835 GB 17774127 rows in 118 seconds using direct_path
+03-NOV-26 09:50:09.779: W-2 . . exported "PAYMENT"."TB_VACCT_TRANS":"VACCT_TRANS_2025"  4.588 GB 10544716 rows in 65 seconds using direct_path
+03-NOV-26 09:51:07.832: W-2 . . exported "PAYMENT"."TB_VACCT_TRANS":"VACCT_TRANS_2026"  3.938 GB 9154532 rows in 58 seconds using direct_path
+03-NOV-26 09:51:07.903: W-2 . . exported "PAYMENT"."TB_VACCT_TRANS":"VACCT_TRANS_9999"  49.17 KB       0 rows in 0 seconds using direct_path
+03-NOV-26 09:51:09.113: ORA-39173: Encrypted data has been stored unencrypted in dump file set.
+03-NOV-26 09:51:09.425: W-1      Completed 37 TABLE_EXPORT/TABLE/TABLE_DATA objects in 8231 seconds
+03-NOV-26 09:51:10.270: W-1 Master table "SYSTEM"."DBC_EXP_20261103065622_02" successfully loaded/unloaded
+03-NOV-26 09:51:10.830: ******************************************************************************
+03-NOV-26 09:51:10.832: Dump file set for SYSTEM.DBC_EXP_20261103065622_02 is:
+03-NOV-26 09:51:10.835:   /mig/DBA_PUMP/exp_table_dataonly_20261103_02_01.dmp
+03-NOV-26 09:51:10.836:   /mig/DBA_PUMP/exp_table_dataonly_20261103_02_02.dmp
+03-NOV-26 09:51:10.837:   /mig/DBA_PUMP/exp_table_dataonly_20261103_02_03.dmp
+03-NOV-26 09:51:11.130: Job "SYSTEM"."DBC_EXP_20261103065622_02" successfully completed at Tue Nov 3 09:51:11 2026 elapsed 0 02:17:20
